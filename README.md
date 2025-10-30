@@ -21,7 +21,10 @@ git checkout -b new_branch_name
 
 ### backend development
 **feature/image-processing** related to image processing algorithms that gamma correct and adjust for inconsistent lighting
+
 **feature/region-of-interest** related to image capture and defining skin/reference card regions
+
+**webpage-ui** basic for front end development please add however many branches you need
 
 ### hardware/electrical teams
 **file-update** place to upload files like CAD or electrical system diagrams
