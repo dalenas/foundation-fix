@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  27 OCT 2025 00:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  30 OCT 2025 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/biggestpp/engineering-project/docs/report/engineer_report.tex
-(/Users/biggestpp/engineering-project/docs/report/engineer_report.tex
+**/Users/biggestpp/foundation-fix/docs/report/engineer_report.tex
+(/Users/biggestpp/foundation-fix/docs/report/engineer_report.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/base/report.cls
@@ -410,7 +410,12 @@ File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
-Package hyperref Info: Option `colorlinks' set `true' on input line 34.
+ (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
@@ -418,24 +423,24 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 ) (./engineer_report.aux)
 \openout1 = `engineer_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -494,23 +499,23 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 53.
+Package hyperref Info: Link coloring ON on input line 55.
  (./engineer_report.out) (./engineer_report.out)
 \@outlinefile=\write3
 \openout3 = `engineer_report.out'.
 
 \c@lstlisting=\count322
-LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 60.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 62.
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) (./engineer_report.toc [1])
@@ -521,37 +526,77 @@ File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 \tf@lof=\write5
 \openout5 = `engineer_report.lof'.
 
- (./engineer_report.lot)
+ (./engineer_report.lot [2])
 \tf@lot=\write6
 \openout6 = `engineer_report.lot'.
 
- [2]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3]
 Chapter 1.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.86     \chapter
+l.90     \chapter
                  {Introduction} [1
 
-{/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+]
 Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--119
+
+ []
+
 [2
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3]
 Chapter 3.
-[3
-
-]
-Chapter 4.
-
-Overfull \hbox (1.01254pt too wide) in paragraph at lines 105--128
- [][] 
- []
-
+<assets/init_sketch_housing.png, id=314, 408.52625pt x 454.69875pt>
+File: assets/init_sketch_housing.png Graphic file (type png)
+<use assets/init_sketch_housing.png>
+Package pdftex.def Info: assets/init_sketch_housing.png  used on input line 136.
+(pdftex.def)             Requested size: 375.80544pt x 418.30017pt.
+<assets/init_cad_housing1.png, id=316, 466.74374pt x 406.51875pt>
+File: assets/init_cad_housing1.png Graphic file (type png)
+<use assets/init_cad_housing1.png>
+Package pdftex.def Info: assets/init_cad_housing1.png  used on input line 141.
+(pdftex.def)             Requested size: 187.89914pt x 163.65291pt.
+<assets/init_cad_housing2.png, id=317, 423.5825pt x 415.5525pt>
+File: assets/init_cad_housing2.png Graphic file (type png)
+<use assets/init_cad_housing2.png>
+Package pdftex.def Info: assets/init_cad_housing2.png  used on input line 142.
+(pdftex.def)             Requested size: 187.89914pt x 184.33376pt.
 [4
 
 ]
+Overfull \vbox (52.59877pt too high) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -559,16 +604,64 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5]
-Chapter 5.
-<assets/userflow.png, id=235, 575.14874pt x 399.4925pt>
+[5 <./assets/init_sketch_housing.png>]
+<assets/init_sketch_dispenser.png, id=327, 960.58875pt x 439.6425pt>
+File: assets/init_sketch_dispenser.png Graphic file (type png)
+<use assets/init_sketch_dispenser.png>
+Package pdftex.def Info: assets/init_sketch_dispenser.png  used on input line 147.
+(pdftex.def)             Requested size: 375.80544pt x 171.99655pt.
+<assets/init_cad_dispenser.png, id=328, 475.7775pt x 369.38pt>
+File: assets/init_cad_dispenser.png Graphic file (type png)
+<use assets/init_cad_dispenser.png>
+Package pdftex.def Info: assets/init_cad_dispenser.png  used on input line 152.
+(pdftex.def)             Requested size: 375.80544pt x 291.77881pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6 <./assets/init_cad_housing1.png> <./assets/init_cad_housing2.png> <./assets/init_sketch_dispenser.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7 <./assets/init_cad_dispenser.png>]
+Chapter 4.
+<assets/userflow.png, id=342, 575.14874pt x 399.4925pt>
 File: assets/userflow.png Graphic file (type png)
 <use assets/userflow.png>
-Package pdftex.def Info: assets/userflow.png  used on input line 151.
+Package pdftex.def Info: assets/userflow.png  used on input line 175.
 (pdftex.def)             Requested size: 375.80544pt x 261.03859pt.
-[6
+<assets/pseudocode1.png, id=343, 824.07875pt x 652.4375pt>
+File: assets/pseudocode1.png Graphic file (type png)
+<use assets/pseudocode1.png>
+Package pdftex.def Info: assets/pseudocode1.png  used on input line 180.
+(pdftex.def)             Requested size: 375.80544pt x 297.53648pt.
+<assets/pseudocode2.png, id=344, 1194.4625pt x 472.76625pt>
+File: assets/pseudocode2.png Graphic file (type png)
+<use assets/pseudocode2.png>
+Package pdftex.def Info: assets/pseudocode2.png  used on input line 181.
+(pdftex.def)             Requested size: 375.80544pt x 148.7418pt.
+<assets/pseudocode3.png, id=345, 816.04875pt x 399.4925pt>
+File: assets/pseudocode3.png Graphic file (type png)
+<use assets/pseudocode3.png>
+Package pdftex.def Info: assets/pseudocode3.png  used on input line 186.
+(pdftex.def)             Requested size: 375.80544pt x 183.97603pt.
+[8
 
  <./assets/userflow.png>]
+<assets/ui-landing.png, id=351, 406.51875pt x 539.01375pt>
+File: assets/ui-landing.png Graphic file (type png)
+<use assets/ui-landing.png>
+Package pdftex.def Info: assets/ui-landing.png  used on input line 191.
+(pdftex.def)             Requested size: 187.89914pt x 249.13368pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -576,61 +669,85 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7]
+[9 <./assets/pseudocode1.png> <./assets/pseudocode2.png>]
+<assets/ui-load.png, id=359, 475.7775pt x 316.18124pt>
+File: assets/ui-load.png Graphic file (type png)
+<use assets/ui-load.png>
+Package pdftex.def Info: assets/ui-load.png  used on input line 196.
+(pdftex.def)             Requested size: 187.89914pt x 124.8685pt.
+<assets/ui-color.png, id=360, 467.7475pt x 316.18124pt>
+File: assets/ui-color.png Graphic file (type png)
+<use assets/ui-color.png>
+Package pdftex.def Info: assets/ui-color.png  used on input line 197.
+(pdftex.def)             Requested size: 187.89914pt x 127.01543pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10 <./assets/pseudocode3.png> <./assets/ui-landing.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 204--208
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11 <./assets/ui-load.png> <./assets/ui-color.png>]
+Chapter 5.
+<assets/wiring.png, id=373, 736.7525pt x 739.76375pt>
+File: assets/wiring.png Graphic file (type png)
+<use assets/wiring.png>
+Package pdftex.def Info: assets/wiring.png  used on input line 225.
+(pdftex.def)             Requested size: 375.80544pt x 377.33095pt.
+[12
+
+]
+Overfull \vbox (11.62955pt too high) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13 <./assets/wiring.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
 Chapter 6.
-[8
+[15
 
 ]
 Chapter 7.
-[9
+[16
 
 ]
 Chapter 8.
-[10
 
-]
-Chapter 9.
-[11
+Overfull \hbox (42.619pt too wide) in paragraph at lines 287--311
+ [][] 
+ []
 
-] [12
+[17
 
-]
-Appendix A.
-<assets/pseudocode1.png, id=267, 824.07875pt x 652.4375pt>
-File: assets/pseudocode1.png Graphic file (type png)
-<use assets/pseudocode1.png>
-Package pdftex.def Info: assets/pseudocode1.png  used on input line 210.
-(pdftex.def)             Requested size: 375.80544pt x 297.53648pt.
-<assets/pseudocode2.png, id=268, 1194.4625pt x 472.76625pt>
-File: assets/pseudocode2.png Graphic file (type png)
-<use assets/pseudocode2.png>
-Package pdftex.def Info: assets/pseudocode2.png  used on input line 211.
-(pdftex.def)             Requested size: 375.80544pt x 148.7418pt.
-[13
+] (./engineer_report.bbl [18
 
-]
-Overfull \vbox (19.18486pt too high) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14 <./assets/pseudocode1.png> <./assets/pseudocode2.png>]
-Appendix B.
-<assets/wiring.png, id=280, 736.7525pt x 739.76375pt>
-File: assets/wiring.png Graphic file (type png)
-<use assets/wiring.png>
-Package pdftex.def Info: assets/wiring.png  used on input line 218.
-(pdftex.def)             Requested size: 375.80544pt x 377.33095pt.
-[15
-
- <./assets/wiring.png>]
-Appendix C.
-[16
+]) [19
 
 ] (./engineer_report.aux)
  ***********
@@ -638,21 +755,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `engineer_report.out' has not changed.
-(rerunfilecheck)             Checksum: 97A76CD4C3BC1905657985A3F9B6FCB5;5235.
+(rerunfilecheck)             Checksum: D6685290CCA2F010EFB767AABD32EB42;7204.
  ) 
 Here is how much of TeX's memory you used:
- 14783 strings out of 474116
- 231511 string characters out of 5734122
- 1941187 words of memory out of 5000000
- 36890 multiletter control sequences out of 15000+600000
- 574808 words of font info for 78 fonts, out of 8000000 for 9000
+ 14998 strings out of 474116
+ 236119 string characters out of 5734122
+ 1942187 words of memory out of 5000000
+ 37073 multiletter control sequences out of 15000+600000
+ 575246 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,398b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on engineer_report.pdf (19 pages, 1388052 bytes).
+ 75i,11n,79p,403b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on engineer_report.pdf (23 pages, 3641675 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 497 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 458 words of extra memory for PDF output out of 10000 (max. 10000000)
 
