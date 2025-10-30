@@ -1,3 +1,6 @@
+# 2: Raspberry Pi Code
+
+```python
 def EVENT_HANDLER():
     #extract lab values
     SAMPLE_PICTURE = CAMERA_CAPUTRE initiated by BUTTON_PRESS
@@ -9,3 +12,4 @@ def EVENT_HANDLER():
     
     DEPLOY_TO_RASPBERRY_PI(PAINT_QUANTITIES)
     #servo motors move syringes
+```

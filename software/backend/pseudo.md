@@ -1,3 +1,5 @@
+# 1: Color Bias Adjustment and Sampling
+```python
 def IMAGE_PROCESSING(SAMPLE_PICTURE) :
     #INPUT: SAMPLE_PICTURE - image captured by camera
     #OUTPUT: LAB_values - color values compatible with paint mixing
@@ -80,3 +82,6 @@ def CONVERT_RGB_LAB(rgb_skin_corrected) -> list
     # OUTPUT: LAB_values
     # Utilizes a linear transformation that converts rgb to LAB
     # openCV has a function that does this
+
+
+```

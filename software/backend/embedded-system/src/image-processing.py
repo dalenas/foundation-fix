@@ -1,2 +1,0 @@
-import openCV as cv
-

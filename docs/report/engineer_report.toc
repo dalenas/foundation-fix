@@ -1,0 +1,36 @@
+\contentsline {chapter}{\numberline {1}Abstract}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Introduction}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Background}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Objectives}{2}{section.2.2}%
+\contentsline {chapter}{\numberline {3}System Overview}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Overall Architecture}{3}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Hardware Design and Specifications}{4}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bill of Materials}{4}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Sensors, Actuators, Drivers}{5}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Electrical Connections and Power Distributions}{5}{section.4.3}%
+\contentsline {section}{\numberline {4.4}CAD Models}{5}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Methodology}{5}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Software Design}{6}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Techstack}{6}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Control Logic}{6}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Computer Vision Pipeline}{7}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Color Correction Algorithm}{7}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Foundation Formulation}{7}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Raspberry Pi Integration}{7}{section.5.6}%
+\contentsline {section}{\numberline {5.7}User Interface}{7}{section.5.7}%
+\contentsline {section}{\numberline {5.8}User Manual}{7}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Electrical Systems Design}{8}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Circuit Schematic and Breadboard Design}{8}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Signal Conditioning and Safety Considerations}{8}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Results and Analysis}{9}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Testing Protocol}{9}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Color Accuracy}{9}{section.7.2}%
+\contentsline {section}{\numberline {7.3}System Performance}{9}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Discussion}{10}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Limitations}{10}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{10}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Conclusion}{11}{chapter.9}%
+\contentsline {chapter}{References}{12}{chapter*.3}%
+\contentsline {chapter}{\numberline {A}Pseudocode Listings}{13}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Wiring \& Safety}{15}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Data Schemas}{16}{appendix.C}%
