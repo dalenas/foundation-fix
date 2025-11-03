@@ -17,11 +17,23 @@ def lighting_correction(captured_reference, captured_skin):
     return lighting_corrected_skin
 
 # xyz_codes = RGB_TO_XYZ_MATRIX @ lighting_corrected_skin
-# [3 x 1] = [3 x 3] x [3 x 1]
+# [3 x p] = [3 x 3] x [3 x p]
 def linear_to_xyz(linear_codes):
     linear_codes_T = np.transpose(linear_codes)
     xyz_codes_T = const.RGB_TO_XYZ_MATRIX @ linear_codes_T
     xyz_codes = np.transpose(xyz_codes_T)
     return xyz_codes
 
-def xyz_to_lab():
+X_ind = 0
+Y_ind = 1
+Z_ind = 2
+def xyz_to_lab(xyz_codes):
+    f_sub_xyz = lambda x: x**(1 / 3) if x > const.EPSILON else (const.KAPPA * x + 16) / 116
+    f_sub_x = f_sub_xyz(xyz_codes[:, X_ind])
+    f_sub_y = f_sub_xyz(xyz_codes[:, Y_ind])
+    f_sub_z = f_sub_xyz(xyz_codes[:, Z_ind])
+    L = 116 * f_sub_y - 16
+    a = 500 * (f_sub_x - f_sub_y)
+    b = 200 * (f_sub_y - f_sub_z)
+    Lab_codes = np.stack((L, a, b), axis = 1)
+    return Lab_codes
