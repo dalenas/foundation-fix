@@ -37,3 +37,12 @@ def xyz_to_lab(xyz_codes):
     b = 200 * (f_sub_y - f_sub_z)
     Lab_codes = np.stack((L, a, b), axis = 1)
     return Lab_codes
+
+L_ind = 0
+a_ind = 1
+b_ind = 2
+def average_lab(Lab_codes):
+    L_avg = np.mean(Lab_codes[:, L_ind])
+    a_avg = np.mean(Lab_codes[:, a_ind])
+    b_avg = np.mean(Lab_codes[:, b_ind])
+    return np.array([L_avg, a_avg, b_avg])
