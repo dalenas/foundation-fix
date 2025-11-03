@@ -10,9 +10,9 @@ def gamma_to_linear(gamma_codes):
     return linear_rgb
 
 def lighting_correction(captured_reference, captured_skin):
-    stored_reference_pinv = np.lingalg.pinv(const.REFERENCE_LINEAR_RGB)
+    stored_reference_pinv = np.linalg.pinv(const.REFERENCE_LINEAR_RGB)
     lighting_matrix = stored_reference_pinv @ captured_reference
-    lighting_matrix_inv = np.lingalg.inv(lighting_matrix)
+    lighting_matrix_inv = np.linalg.inv(lighting_matrix)
     lighting_corrected_skin = captured_skin @ lighting_matrix_inv
     return lighting_corrected_skin
 
@@ -28,10 +28,12 @@ X_ind = 0
 Y_ind = 1
 Z_ind = 2
 def xyz_to_lab(xyz_codes):
-    f_sub_xyz = lambda x: x**(1 / 3) if x > const.EPSILON else (const.KAPPA * x + 16) / 116
-    f_sub_x = f_sub_xyz(xyz_codes[:, X_ind])
-    f_sub_y = f_sub_xyz(xyz_codes[:, Y_ind])
-    f_sub_z = f_sub_xyz(xyz_codes[:, Z_ind])
+    f_sub_xyz = np.where(xyz_codes > const.EPSILON,
+                         np.cbrt(xyz_codes),
+                         (const.KAPPA * xyz_codes + 16) / 116)
+    f_sub_x = f_sub_xyz[:, X_ind]
+    f_sub_y = f_sub_xyz[:, Y_ind]
+    f_sub_z = f_sub_xyz[:, Z_ind]
     L = 116 * f_sub_y - 16
     a = 500 * (f_sub_x - f_sub_y)
     b = 200 * (f_sub_y - f_sub_z)
