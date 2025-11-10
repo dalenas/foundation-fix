@@ -7,4 +7,13 @@ app = Flask(__name__)
 
 @app.route('/api/data', methods=['POST'])
 def handle_data():
-    return
+    data = request.get_json()
+
+    image_base64 = data.get("image")  # the base64 image string from frontend
+
+    # run your algorithm that returns hex color
+    hex_color = your_color_algorithm.get_hex_color(image_base64)
+
+    return jsonify({
+        "result": hex_color
+    })
