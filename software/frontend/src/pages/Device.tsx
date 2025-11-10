@@ -1,16 +1,24 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cpu, Image as ImageIcon, CheckCircle2, AlertCircle } from "lucide-react";
+import { Cpu, Power, Image as ImageIcon, CheckCircle2, AlertCircle } from "lucide-react";
 import Header from "@/components/Header";
 import { toast } from "sonner";
 
+// Backend URL: automatic based on environment
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://192.168.1.42:5000";
+
 const Device = () => {
+  // Pi connection states
+  const [isConnected, setIsConnected] = useState(true); // auto-connected since hosted on Pi
+  const [isConnecting, setIsConnecting] = useState(false);
+
+  // Image analysis states
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [analysisResult, setAnalysisResult] = useState<string | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  // Handle image upload and convert to Base64
+  // Handle image upload
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -20,7 +28,7 @@ const Device = () => {
     reader.readAsDataURL(file);
   };
 
-  // Call backend to analyze image
+  // Analyze uploaded image
   const handleAnalyze = async () => {
     if (!selectedImage) {
       toast.error("Please upload an image first.");
@@ -31,7 +39,7 @@ const Device = () => {
     setAnalysisResult(null);
 
     try {
-      const response = await fetch("http://raspberrypi.local:5000/analyze", {
+      const response = await fetch(`${BACKEND_URL}/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: selectedImage })
@@ -54,19 +62,71 @@ const Device = () => {
     }
   };
 
+  // Simulated dispense function
+const handleDispense = async () => {
+    if (!analysisResult) return;
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/dispense`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ color: analysisResult })
+      });
+
+      const data = await response.json();
+      if (data.error) toast.error(data.error);
+      else toast.success(`Dispensing started for ${analysisResult}`);
+    } catch (err) {
+      console.error(err);
+      toast.error("Error connecting to backend.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
+
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-6 max-w-4xl">
+          {/* Page title */}
           <div className="mb-8">
             <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Raspberry Pi Color Analysis
+              Foundation Fix Pi
             </h1>
-            <p className="text-muted-foreground">Upload a face image to determine the optimal foundation color.</p>
+            <p className="text-muted-foreground">Your Raspberry Pi is connected and ready to analyze skin tones.</p>
           </div>
 
-          {/* Image Upload & Analysis */}
+          {/* Pi connection card */}
+          <Card className="mb-6 border-border shadow-[var(--shadow-soft)]">
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="text-foreground flex items-center gap-2">
+                    <Cpu className="w-5 h-5 text-primary" />
+                    Foundation Fix Pi
+                  </CardTitle>
+                  <CardDescription>Model: RPi-4B-PRO</CardDescription>
+                </div>
+                <div className={`px-4 py-2 rounded-full flex items-center gap-2 ${
+                  isConnected ? "bg-green-500/10 text-green-600" : "bg-muted text-muted-foreground"
+                }`}>
+                  {isConnected ? (
+                    <>
+                      <CheckCircle2 className="w-4 h-4" />
+                      <span className="text-sm font-medium">Connected</span>
+                    </>
+                  ) : (
+                    <>
+                      <AlertCircle className="w-4 h-4" />
+                      <span className="text-sm font-medium">Not Connected</span>
+                    </>
+                  )}
+                </div>
+              </div>
+            </CardHeader>
+          </Card>
+
+          {/* Image upload & analysis */}
           <Card className="mb-8 border-border shadow-[var(--shadow-soft)]">
             <CardHeader>
               <CardTitle className="text-foreground flex items-center gap-2">
@@ -76,11 +136,9 @@ const Device = () => {
             </CardHeader>
             <CardContent>
               <input type="file" accept="image/*" onChange={handleImageUpload} className="mb-4" />
-
               {selectedImage && (
                 <img src={selectedImage} alt="Uploaded" className="rounded-lg shadow-md w-64 mb-4" />
               )}
-
               <Button onClick={handleAnalyze} disabled={isAnalyzing} className="gap-2">
                 {isAnalyzing ? "Analyzing..." : "Analyze Image"}
               </Button>
@@ -93,10 +151,54 @@ const Device = () => {
                     className="mt-2 w-16 h-16 rounded shadow-md border"
                     style={{ backgroundColor: analysisResult }}
                   />
+                  <Button onClick={handleDispense} className="mt-2 gap-2">Dispense Foundation</Button>
                 </div>
               )}
             </CardContent>
           </Card>
+
+          {/* Device information & cartridge status */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-border shadow-[var(--shadow-soft)]">
+              <CardHeader>
+                <CardTitle className="text-foreground text-lg">Device Status</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <p className="font-medium text-foreground">Power</p>
+                  <span className="text-sm text-muted-foreground">Active</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <p className="font-medium text-foreground">Network</p>
+                  <span className="text-sm text-muted-foreground">Connected</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border shadow-[var(--shadow-soft)]">
+              <CardHeader>
+                <CardTitle className="text-foreground text-lg">Formula Cartridges</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {["Light Base", "Medium Base", "Dark Base", "Neutral Tone", "Warm Tone", "Cool Tone"].map((cartridge, index) => (
+                  <div key={index} className="flex items-center justify-between">
+                    <span className="text-sm text-foreground">{cartridge}</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 h-2 bg-muted rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-primary to-primary/80"
+                          style={{ width: `${Math.floor(Math.random() * 30) + 60}%` }}
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground w-8">
+                        {Math.floor(Math.random() * 30) + 60}%
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
     </div>
