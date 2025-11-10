@@ -41,5 +41,9 @@ def dispense():
     # Example: trigger GPIO pins or send command to dispenser
     return {"status": "dispensing started", "color": color}
 
+@app.route("/ping", methods=["GET"])
+def ping():
+    return {"status": "ok"}, 200
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
