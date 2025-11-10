@@ -20,7 +20,7 @@ const Device = () => {
     reader.readAsDataURL(file);
   };
 
-  const handleAnalyze = async () => {
+const handleAnalyze = async () => {
     if (!selectedImage) {
       toast.error("Please upload an image first.");
       return;
@@ -36,14 +36,21 @@ const Device = () => {
       });
 
       const data = await response.json();
-      setAnalysisResult(data.result || "Optimal match calculated.");
+
+      if (!data.result) {
+        throw new Error("No result returned from backend");
+      }
+
+      setAnalysisResult(data.result);
       toast.success("Analysis complete!");
-    } catch {
+    } catch (err) {
+      console.error(err);
       toast.error("Error analyzing image.");
     } finally {
       setIsAnalyzing(false);
     }
   };
+
 
   const handleDispense = async () => {
     if (!analysisResult) {
