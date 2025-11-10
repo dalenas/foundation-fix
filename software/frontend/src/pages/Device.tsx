@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bluetooth, Power, Wifi, Battery, CheckCircle2, AlertCircle } from "lucide-react";
+import { Power, Wifi, Battery, CheckCircle2, AlertCircle, Cpu } from "lucide-react";
 import Header from "@/components/Header";
 import { toast } from "sonner";
 
@@ -11,31 +11,31 @@ const Device = () => {
 
   const handleConnect = async () => {
     setIsConnecting(true);
-    
-    // Simulate connection process
+
+    // Simulate Raspberry Pi connection
     setTimeout(() => {
       setIsConnected(true);
       setIsConnecting(false);
-      toast.success("Successfully connected to Foundation Fix Device!");
+      toast.success("Successfully connected to Raspberry Pi!");
     }, 2000);
   };
 
   const handleDisconnect = () => {
     setIsConnected(false);
-    toast.info("Disconnected from device");
+    toast.info("Disconnected from Raspberry Pi");
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="mb-8">
             <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               Device Connection
             </h1>
-            <p className="text-muted-foreground">Connect to your Foundation Fix foundation machine</p>
+            <p className="text-muted-foreground">Connect to your Foundation Fix machine via Raspberry Pi</p>
           </div>
 
           {/* Connection Status Card */}
@@ -44,10 +44,10 @@ const Device = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="text-foreground flex items-center gap-2">
-                    <Bluetooth className="w-5 h-5 text-primary" />
-                    Foundation Fix Pro
+                    <Cpu className="w-5 h-5 text-primary" />
+                    Foundation Fix Pi
                   </CardTitle>
-                  <CardDescription>Model: CB-2024-PRO</CardDescription>
+                  <CardDescription>Model: RPi-4B-PRO</CardDescription>
                 </div>
                 <div className={`px-4 py-2 rounded-full flex items-center gap-2 ${
                   isConnected 
@@ -78,8 +78,8 @@ const Device = () => {
                     size="lg"
                     className="gap-2"
                   >
-                    <Bluetooth className="w-5 h-5" />
-                    {isConnecting ? "Connecting..." : "Connect Device"}
+                    <Cpu className="w-5 h-5" />
+                    {isConnecting ? "Connecting..." : "Connect Pi"}
                   </Button>
                 ) : (
                   <Button
@@ -134,8 +134,8 @@ const Device = () => {
                         <Wifi className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium text-foreground">Signal</p>
-                        <p className="text-sm text-muted-foreground">Excellent</p>
+                        <p className="font-medium text-foreground">Network</p>
+                        <p className="text-sm text-muted-foreground">Connected</p>
                       </div>
                     </div>
                   </div>
