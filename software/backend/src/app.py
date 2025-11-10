@@ -1,19 +1,33 @@
-# INTEGRATION STEP
-# This is intended to be an event handler that helps communicate between UI and backend
-
 from flask import Flask, request, jsonify
+from color_algorithm import image_to_hex
+from PIL import Image
+import base64
+from io import BytesIO
 
 app = Flask(__name__)
 
-@app.route('/api/data', methods=['POST'])
-def handle_data():
+@app.route('/analyze', methods=['POST'])
+def analyze():
     data = request.get_json()
+    image_base64 = data.get("image")
 
-    image_base64 = data.get("image")  # the base64 image string from frontend
+    if not image_base64:
+        return jsonify({"error": "No image provided"}), 400
 
-    # run your algorithm that returns hex color
-    hex_color = your_color_algorithm.get_hex_color(image_base64)
+    # Strip Base64 header if present
+    if image_base64.startswith("data:image"):
+        image_base64 = image_base64.split(",")[1]
 
-    return jsonify({
-        "result": hex_color
-    })
+    # Decode and load as image
+    image_bytes = base64.b64decode(image_base64)
+    img = Image.open(BytesIO(image_bytes))
+    img.save("temp_image.png")  # temporary file for processing
+
+    try:
+        hex_color = image_to_hex("temp_image.png")
+        return jsonify({"result": hex_color})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
