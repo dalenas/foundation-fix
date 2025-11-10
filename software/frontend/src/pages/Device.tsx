@@ -1,28 +1,71 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Power, Wifi, Battery, CheckCircle2, AlertCircle, Cpu } from "lucide-react";
+import { Cpu, Image as ImageIcon, Upload, CheckCircle2, AlertCircle, Power } from "lucide-react";
 import Header from "@/components/Header";
 import { toast } from "sonner";
 
 const Device = () => {
-  const [isConnected, setIsConnected] = useState(false);
-  const [isConnecting, setIsConnecting] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [analysisResult, setAnalysisResult] = useState<string | null>(null);
+  const [isDispensing, setIsDispensing] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  const handleConnect = async () => {
-    setIsConnecting(true);
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
 
-    // Simulate Raspberry Pi connection
-    setTimeout(() => {
-      setIsConnected(true);
-      setIsConnecting(false);
-      toast.success("Successfully connected to Raspberry Pi!");
-    }, 2000);
+    const reader = new FileReader();
+    reader.onload = () => setSelectedImage(reader.result as string);
+    reader.readAsDataURL(file);
   };
 
-  const handleDisconnect = () => {
-    setIsConnected(false);
-    toast.info("Disconnected from Raspberry Pi");
+  const handleAnalyze = async () => {
+    if (!selectedImage) {
+      toast.error("Please upload an image first.");
+      return;
+    }
+
+    setIsAnalyzing(true);
+
+    try {
+      const response = await fetch("http://raspberrypi.local:5000/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: selectedImage })
+      });
+
+      const data = await response.json();
+      setAnalysisResult(data.result || "Optimal match calculated.");
+      toast.success("Analysis complete!");
+    } catch {
+      toast.error("Error analyzing image.");
+    } finally {
+      setIsAnalyzing(false);
+    }
+  };
+
+  const handleDispense = async () => {
+    if (!analysisResult) {
+      toast.error("Please analyze an image first.");
+      return;
+    }
+
+    setIsDispensing(true);
+
+    try {
+      const response = await fetch("http://raspberrypi.local:5000/dispense", {
+        method: "POST"
+      });
+
+      if (!response.ok) throw new Error();
+
+      toast.success("Dispensing foundation...");
+    } catch {
+      toast.error("Error dispensing foundation.");
+    } finally {
+      setIsDispensing(false);
+    }
   };
 
   return (
@@ -33,12 +76,12 @@ const Device = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="mb-8">
             <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Device Connection
+              Raspberry Pi Status
             </h1>
-            <p className="text-muted-foreground">Connect to your Foundation Fix machine via Raspberry Pi</p>
+            <p className="text-muted-foreground">Raspberry Pi is locally hosted and automatically connected.</p>
           </div>
 
-          {/* Connection Status Card */}
+          {/* Connected Pi Card */}
           <Card className="mb-6 border-border shadow-[var(--shadow-soft)]">
             <CardHeader>
               <div className="flex items-center justify-between">
@@ -49,124 +92,69 @@ const Device = () => {
                   </CardTitle>
                   <CardDescription>Model: RPi-4B-PRO</CardDescription>
                 </div>
-                <div className={`px-4 py-2 rounded-full flex items-center gap-2 ${
-                  isConnected 
-                    ? "bg-green-500/10 text-green-600" 
-                    : "bg-muted text-muted-foreground"
-                }`}>
-                  {isConnected ? (
-                    <>
-                      <CheckCircle2 className="w-4 h-4" />
-                      <span className="text-sm font-medium">Connected</span>
-                    </>
-                  ) : (
-                    <>
-                      <AlertCircle className="w-4 h-4" />
-                      <span className="text-sm font-medium">Not Connected</span>
-                    </>
-                  )}
+                <div className="px-4 py-2 rounded-full flex items-center gap-2 bg-green-500/10 text-green-600">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span className="text-sm font-medium">Connected</span>
                 </div>
               </div>
             </CardHeader>
             <CardContent>
-              <div className="flex justify-center py-4">
-                {!isConnected ? (
-                  <Button
-                    onClick={handleConnect}
-                    disabled={isConnecting}
-                    variant="elegant"
-                    size="lg"
-                    className="gap-2"
-                  >
-                    <Cpu className="w-5 h-5" />
-                    {isConnecting ? "Connecting..." : "Connect Pi"}
-                  </Button>
-                ) : (
-                  <Button
-                    onClick={handleDisconnect}
-                    variant="outline"
-                    size="lg"
-                    className="gap-2"
-                  >
-                    <Power className="w-5 h-5" />
-                    Disconnect
-                  </Button>
-                )}
-              </div>
+              <p className="text-muted-foreground text-sm">
+                Device is running locally. No pairing is required.
+              </p>
             </CardContent>
           </Card>
 
-          {/* Device Information */}
-          {isConnected && (
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="border-border shadow-[var(--shadow-soft)]">
-                <CardHeader>
-                  <CardTitle className="text-foreground text-lg">Device Status</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center">
-                        <Power className="w-5 h-5 text-green-600" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">Power</p>
-                        <p className="text-sm text-muted-foreground">Active</p>
-                      </div>
-                    </div>
-                  </div>
+          {/* Image Upload & Analysis */}
+          <Card className="mb-8 border-border shadow-[var(--shadow-soft)]">
+            <CardHeader>
+              <CardTitle className="text-foreground flex items-center gap-2">
+                <ImageIcon className="w-5 h-5 text-primary" /> Upload Image
+              </CardTitle>
+              <CardDescription>Select or take a photo to analyze optimal foundation mix.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <input type="file" accept="image/*" onChange={handleImageUpload} className="mb-4" />
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                        <Battery className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">Battery</p>
-                        <p className="text-sm text-muted-foreground">85%</p>
-                      </div>
-                    </div>
-                  </div>
+              {selectedImage && (
+                <img src={selectedImage} alt="Uploaded" className="rounded-lg shadow-md w-64 mb-4" />
+              )}
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Wifi className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">Network</p>
-                        <p className="text-sm text-muted-foreground">Connected</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <Button onClick={handleAnalyze} disabled={isAnalyzing} className="gap-2">
+                {isAnalyzing ? "Analyzing..." : "Analyze Image"}
+              </Button>
 
-              <Card className="border-border shadow-[var(--shadow-soft)]">
-                <CardHeader>
-                  <CardTitle className="text-foreground text-lg">Formula Cartridges</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  {["Light Base", "Medium Base", "Dark Base", "Neutral Tone", "Warm Tone", "Cool Tone"].map((cartridge, index) => (
-                    <div key={index} className="flex items-center justify-between">
-                      <span className="text-sm text-foreground">{cartridge}</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 h-2 bg-muted rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-primary to-primary/80"
-                            style={{ width: `${Math.floor(Math.random() * 30) + 60}%` }}
-                          />
-                        </div>
-                        <span className="text-xs text-muted-foreground w-8">
-                          {Math.floor(Math.random() * 30) + 60}%
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-            </div>
-          )}
+              {analysisResult && (
+                <div className="mt-4 p-4 bg-muted rounded-md">
+                  <p className="font-semibold">Analysis Result:</p>
+                  <p>{analysisResult}</p>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+
+          {/* Dispense Section */}
+          <Card className="border-border shadow-[var(--shadow-soft)]">
+            <CardHeader>
+              <CardTitle className="text-foreground text-lg">Dispense Foundation</CardTitle>
+              <CardDescription>Send command to Raspberry Pi to dispense the calculated mix.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button
+                onClick={handleDispense}
+                disabled={isDispensing || !analysisResult}
+                className="gap-2"
+              >
+                {isDispensing ? "Dispensing..." : "Dispense"}
+              </Button>
+
+              {!analysisResult && (
+                <p className="mt-2 flex items-center text-red-600 text-sm gap-2">
+                  <AlertCircle className="h-4 w-4" /> Analyze image before dispensing
+                </p>
+              )}
+            </CardContent>
+          </Card>
         </div>
       </main>
     </div>
@@ -174,3 +162,4 @@ const Device = () => {
 };
 
 export default Device;
+import { useNavigate } from "react-router-dom";
