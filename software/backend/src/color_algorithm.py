@@ -17,8 +17,13 @@ def image_to_hex(image_path):
     img = Image.open(image_path).convert("RGB")
     img_np = np.array(img)[:, :, ::-1]  # PIL RGB → OpenCV BGR
 
+    if img_np is None:
+        raise ValueError("Image conversion failed")
+
     # Detect face and crop skin region
     skin_pixels = define_skin(img_np)
+    if skin_pixels is None:
+        raise ValueError("Skin detection failed")
 
     # Flatten to Nx3 array and normalize
     skin_flat = skin_pixels.reshape(-1, 3) / 255.0
