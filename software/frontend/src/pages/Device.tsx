@@ -16,7 +16,7 @@ const Device = () => {
     setTimeout(() => {
       setIsConnected(true);
       setIsConnecting(false);
-      toast.success("Successfully connected to ChromaBlend Device!");
+      toast.success("Successfully connected to Foundation Fix Device!");
     }, 2000);
   };
 
@@ -35,7 +35,7 @@ const Device = () => {
             <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               Device Connection
             </h1>
-            <p className="text-muted-foreground">Connect to your ChromaBlend foundation machine</p>
+            <p className="text-muted-foreground">Connect to your Foundation Fix foundation machine</p>
           </div>
 
           {/* Connection Status Card */}
@@ -45,7 +45,7 @@ const Device = () => {
                 <div>
                   <CardTitle className="text-foreground flex items-center gap-2">
                     <Bluetooth className="w-5 h-5 text-primary" />
-                    ChromaBlend Pro
+                    Foundation Fix Pro
                   </CardTitle>
                   <CardDescription>Model: CB-2024-PRO</CardDescription>
                 </div>

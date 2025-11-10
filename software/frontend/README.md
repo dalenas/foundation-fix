@@ -13,8 +13,8 @@
 
 ```bash
 # 1. Create the project
-npm create vite@latest blush-connect-studio -- --template react-ts
-cd blush-connect-studio
+npm create vite@latest foundation-fix -- --template react-ts
+cd foundation-fix
 
 # 2. Install dependencies
 npm install idb lucide-react react-router-dom
