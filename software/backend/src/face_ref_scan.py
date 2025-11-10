@@ -12,8 +12,6 @@ def image_capture():
     else:
         ret, frame = cap.read()
 
-   
-
     cap.release()
 
     return ret, frame
@@ -92,9 +90,6 @@ def define_skin(img):
     cv2.imshow("right cheek", right_cheek)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-    
-    
-
     
 
 def main() :
