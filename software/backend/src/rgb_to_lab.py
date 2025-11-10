@@ -16,8 +16,6 @@ def lighting_correction(captured_reference, captured_skin):
     lighting_corrected_skin = captured_skin @ lighting_matrix_inv
     return lighting_corrected_skin
 
-# xyz_codes = RGB_TO_XYZ_MATRIX @ lighting_corrected_skin
-# [3 x p] = [3 x 3] x [3 x p]
 def linear_to_xyz(linear_codes):
     linear_codes_T = np.transpose(linear_codes)
     xyz_codes_T = const.RGB_TO_XYZ_MATRIX @ linear_codes_T
