@@ -123,11 +123,15 @@ const Device = () => {
               <Button onClick={handleAnalyze} disabled={isAnalyzing} className="gap-2">
                 {isAnalyzing ? "Analyzing..." : "Analyze Image"}
               </Button>
-
               {analysisResult && (
                 <div className="mt-4 p-4 bg-muted rounded-md">
-                  <p className="font-semibold">Analysis Result:</p>
+                  <p className="font-semibold">Hex Code Result:</p>
                   <p>{analysisResult}</p>
+
+                  <div
+                    className="mt-2 w-16 h-16 rounded shadow-md border"
+                    style={{ backgroundColor: analysisResult }}
+                  />
                 </div>
               )}
             </CardContent>
