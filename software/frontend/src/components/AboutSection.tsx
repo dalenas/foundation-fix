@@ -35,11 +35,11 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Ival Momoh",
-    role: "Front End Software Team",
+    role: "Frontend Software Team",
   },
   {
     name: "Jay Kim",
-    role: "Front End Software Team Lead",
+    role: "Frontend Software Team Lead",
   },
   {
     name: "Richard Tokiyeda",
@@ -92,21 +92,21 @@ const AboutSection = () => {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Foundation Fix was born from a simple frustration: finding the perfect
-                  foundation shade shouldn't be this hard. After countless hours spent in
-                  stores trying to match undertones and textures, our founder realized
-                  there had to be a better way.
+                  Foundation Fix was created to make personalized makeup accessible through
+                  technology. Our team of engineering students designed an intelligent foundation
+                  mixing machine that analyzes skin tone using computer vision and dispenses a
+                  precise pigment blend to match it perfectly.
                 </p>
                 <p>
-                  We combined expertise in cosmetic chemistry, IoT engineering, and user
-                  experience design to create a revolutionary system that puts the power
-                  of customization in your hands. No more settling for "close enough" —
-                  now you can create your perfect match.
+                  Combining software, electrical, and mechanical engineering, we built an IoT system
+                  powered by Raspberry Pi, OpenCV image processing, and servo-controlled pigment
+                  pumps. Users can connect through a sleek web interface to scan, customize, and
+                  save their shade profiles.
                 </p>
                 <p>
-                  Today, Foundation Fix is helping thousands of people discover their
-                  ideal foundation formula, celebrating the beautiful diversity of skin
-                  tones around the world.
+                  Foundation Fix represents more than a project, it’s a step toward inclusive beauty,
+                  merging innovation and design to help every user find their perfect match with
+                  accuracy, creativity, and confidence.
                 </p>
               </div>
             </div>
