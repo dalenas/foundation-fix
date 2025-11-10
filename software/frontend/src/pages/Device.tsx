@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import { toast } from "sonner";
 
 // Backend URL: automatic based on environment
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://192.168.1.42:5000";
+const BACKEND_URL = "http://172.31.252.9:5000";
 
 const Device = () => {
   // Pi connection states
