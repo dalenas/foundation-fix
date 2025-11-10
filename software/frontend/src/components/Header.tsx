@@ -1,6 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
-import { Palette, User, Image, Bluetooth } from "lucide-react";
+import { Palette, User, Image } from "lucide-react";
 import { Button } from "./ui/button";
+
+const RaspberryPiIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="M12 2C10.8954 2 10 2.89543 10 4V6H8V4C8 2.89543 7.10457 2 6 2C4.89543 2 4 2.89543 4 4V6H2V8H22V6H20V4C20 2.89543 19.1046 2 18 2C16.8954 2 16 2.89543 16 4V6H14V4C14 2.89543 13.1046 2 12 2ZM2 10V22H22V10H2ZM12 12C13.6569 12 15 13.3431 15 15C15 16.6569 13.6569 18 12 18C10.3431 18 9 16.6569 9 15C9 13.3431 10.3431 12 12 12Z" />
+  </svg>
+);
 
 const Header = () => {
   const location = useLocation();
@@ -27,7 +38,7 @@ const Header = () => {
                 size="sm"
                 className="gap-2"
               >
-                <Bluetooth className="w-4 h-4" />
+                <RaspberryPiIcon className="w-4 h-4" />
                 Device
               </Button>
             </Link>
