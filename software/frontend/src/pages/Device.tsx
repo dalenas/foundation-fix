@@ -5,21 +5,18 @@ import { Cpu, Power, Image as ImageIcon, CheckCircle2, AlertCircle } from "lucid
 import Header from "@/components/Header";
 import { toast } from "sonner";
 
-// Replace with your Pi LAN IP
-const LAN_PI_IP = "172.31.252.9"; 
-const LOCALHOST_PI_IP = "127.0.0.1:5000";
-
-// Choose backend URL depending on host
-const BACKEND_URL = "http://127.0.0.1:5000"; // points to mock backend running on your PC
+// Backend URL
+const BACKEND_URL = "http://127.0.0.1:5000"; 
 
 const Device = () => {
   const [isConnected, setIsConnected] = useState(false);
   const [piOnline, setPiOnline] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedImagePreview, setSelectedImagePreview] = useState<string | null>(null);
   const [analysisResult, setAnalysisResult] = useState<string | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  // Check if Pi backend is online
+  // Check Pi
   const checkPiConnection = async () => {
     try {
       const res = await fetch(`${BACKEND_URL}/ping`);
@@ -33,20 +30,25 @@ const Device = () => {
 
   useEffect(() => {
     checkPiConnection();
-    const interval = setInterval(checkPiConnection, 5000); // recheck every 5 seconds
+    const interval = setInterval(checkPiConnection, 5000);
     return () => clearInterval(interval);
   }, []);
 
+  // Handle file upload
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
+
+    setSelectedFile(file);  
+
     const reader = new FileReader();
-    reader.onload = () => setSelectedImage(reader.result as string);
+    reader.onload = () => setSelectedImagePreview(reader.result as string);
     reader.readAsDataURL(file);
   };
 
+  // Analyze image
   const handleAnalyze = async () => {
-    if (!selectedImage) {
+    if (!selectedFile) {
       toast.error("Please upload an image first.");
       return;
     }
@@ -59,16 +61,19 @@ const Device = () => {
     setAnalysisResult(null);
 
     try {
+      const formData = new FormData();
+      formData.append("image", selectedFile); // ✅ THIS IS THE FIX
+
       const response = await fetch(`${BACKEND_URL}/analyze`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: selectedImage })
+        body: formData, // ✅ No headers set manually
       });
 
       const data = await response.json();
 
-      if (data.error) toast.error(data.error);
-      else {
+      if (data.error) {
+        toast.error(data.error);
+      } else {
         setAnalysisResult(data.result);
         toast.success("Analysis complete!");
       }
@@ -82,6 +87,7 @@ const Device = () => {
     }
   };
 
+  // Dispense
   const handleDispense = async () => {
     if (!analysisResult) return;
     if (!piOnline) {
@@ -93,8 +99,9 @@ const Device = () => {
       const response = await fetch(`${BACKEND_URL}/dispense`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ color: analysisResult })
+        body: JSON.stringify({ color: analysisResult }),
       });
+
       const data = await response.json();
       if (data.error) toast.error(data.error);
       else toast.success(`Dispensing started for ${analysisResult}`);
@@ -113,21 +120,19 @@ const Device = () => {
         <div className="container mx-auto px-6 max-w-4xl">
 
           {/* Page header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Foundation Fix Pi
-            </h1>
-            <p className="text-muted-foreground">
-              {piOnline ? "Pi is connected and ready." : "Pi is offline. Connect Pi to use analysis and dispense."}
-            </p>
-          </div>
+          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            Foundation Fix Pi
+          </h1>
+          <p className="text-muted-foreground">
+            {piOnline ? "Pi is connected and ready." : "Pi is offline. Connect Pi to use analysis and dispense."}
+          </p>
 
-          {/* Pi Connection Card */}
+          {/* Pi connection card */}
           <Card className="mb-6 border-border shadow-[var(--shadow-soft)]">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="text-foreground flex items-center gap-2">
+                  <CardTitle className="flex items-center gap-2">
                     <Cpu className="w-5 h-5 text-primary" /> Foundation Fix Pi
                   </CardTitle>
                   <CardDescription>Model: RPi-4B-PRO</CardDescription>
@@ -151,20 +156,22 @@ const Device = () => {
             </CardHeader>
           </Card>
 
-          {/* Image upload & analyze */}
+          {/* Upload + Analyze */}
           <Card className="mb-8 border-border shadow-[var(--shadow-soft)]">
             <CardHeader>
-              <CardTitle className="text-foreground flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2">
                 <ImageIcon className="w-5 h-5 text-primary" /> Upload Image
               </CardTitle>
               <CardDescription>Select a photo to analyze skin tone.</CardDescription>
             </CardHeader>
             <CardContent>
-              <input type="file" accept="image/*" onChange={handleImageUpload} className="mb-4" />
-              {selectedImage && (
-                <img src={selectedImage} alt="Uploaded" className="rounded-lg shadow-md w-64 mb-4" />
+              <input type="file" accept="image/*" onChange={handleImageUpload} />
+
+              {selectedImagePreview && (
+                <img src={selectedImagePreview} alt="Uploaded" className="rounded-lg shadow-md w-64 my-4" />
               )}
-              <Button onClick={handleAnalyze} disabled={isAnalyzing || !piOnline} className="gap-2 mb-2">
+
+              <Button onClick={handleAnalyze} disabled={isAnalyzing || !piOnline}>
                 {isAnalyzing ? "Analyzing..." : "Analyze Image"}
               </Button>
 
@@ -176,7 +183,7 @@ const Device = () => {
                     className="mt-2 w-16 h-16 rounded shadow-md border"
                     style={{ backgroundColor: analysisResult }}
                   />
-                  <Button onClick={handleDispense} disabled={!piOnline} className="mt-2 gap-2">
+                  <Button className="mt-2" onClick={handleDispense}>
                     Dispense Foundation
                   </Button>
                 </div>
@@ -184,48 +191,6 @@ const Device = () => {
             </CardContent>
           </Card>
 
-          {/* Device info & cartridges */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="border-border shadow-[var(--shadow-soft)]">
-              <CardHeader>
-                <CardTitle className="text-foreground text-lg">Device Status</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <p className="font-medium text-foreground">Power</p>
-                  <span className="text-sm text-muted-foreground">Active</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-medium text-foreground">Network</p>
-                  <span className="text-sm text-muted-foreground">{piOnline ? "Connected" : "Offline"}</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border shadow-[var(--shadow-soft)]">
-              <CardHeader>
-                <CardTitle className="text-foreground text-lg">Formula Cartridges</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                {["Light Base", "Medium Base", "Dark Base", "Neutral Tone", "Warm Tone", "Cool Tone"].map((cartridge, index) => (
-                  <div key={index} className="flex items-center justify-between">
-                    <span className="text-sm text-foreground">{cartridge}</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-muted rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-primary to-primary/80"
-                          style={{ width: `${Math.floor(Math.random() * 30) + 60}%` }}
-                        />
-                      </div>
-                      <span className="text-xs text-muted-foreground w-8">
-                        {Math.floor(Math.random() * 30) + 60}%
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </main>
     </div>
