@@ -10,7 +10,7 @@ const LAN_PI_IP = "172.31.252.9";
 const LOCALHOST_PI_IP = "127.0.0.1:5000";
 
 // Choose backend URL depending on host
-const BACKEND_URL = window.location.hostname === "localhost" ? `http://${LAN_PI_IP}:5000` : `http://${LOCALHOST_PI_IP}`;
+const BACKEND_URL = "http://127.0.0.1:5000"; // points to mock backend running on your PC
 
 const Device = () => {
   const [isConnected, setIsConnected] = useState(false);
