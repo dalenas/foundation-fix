@@ -1,8 +1,13 @@
 # Engineering Project - Foundation Mixture Creator
-## Before PM5
-- finish all code
-- update engineer report as we go
+## Before PM6
+- merge frontend and backend
+- software electrical component integration
+- wokring demo for each sub team
+- engineering project progress and report
+- individual progress slides
 - begin testing
+- finaltech stack
+- main program that integrates all
 
 ---
 

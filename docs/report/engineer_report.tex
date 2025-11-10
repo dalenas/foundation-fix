@@ -19,6 +19,8 @@
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{cite} % Optional: helps handle multiple citations compactly, e.g., [1, 2, 3] becomes [1-3]
+
 
 %----------HYPERREF-----------
 \hypersetup{
@@ -48,7 +50,7 @@
     Elizabeth Yancey, Emma Shin, Harmeet Singh, Ival Momoh,\\
     Jay Kim, Richard Tokiyeda, Victoria Sun
 }
-\date{December -day-, 2025}
+\date{November 17, 2025}
 
 \begin{document}
 
@@ -66,6 +68,8 @@
 
     %===========================ABSTRACT===========================
     \chapter{Abstract}
+    
+    
     The Foundation Identifier and Dispenser aims to develop a machine that is able to
     extract samples from a picture of a human to determine the shade of their skin, allowing
     the machine to dispense a corresponding foundation shade. The results produced
@@ -85,100 +89,181 @@
 
     \chapter{Introduction}
 
-    \section{Background}
+    \section{Research}
+    \subsection{Background of Problem}
+    
+    Testing foundation colors can be a frustrating experience for many, who are unable to find
+    the perfect balance. At the end of the day, no line of foundation can realistically
+    provide colors that cater to every possible skin tone. The seemingly unresolvable desire
+    for a perfect shade leads many makeup users to spend hundreds on shades that are "close enough."
+    This leads to lots of waste, not just in money, but in bottles thrown out after purchase because
+    the match was ultimately unsatisfying. \\
 
-    \section{Objectives}
+    The beauty industry produces 120 billion packaging units per year and 95\% of this these units
+    are discarded, as opposed to recycled \cite{SmithS}. In addition, traditionally a custom skin matched foundation 
+    can cost anywhere from \$60-100 per bottle, which leaves the consumers with the dilemma of whether they should
+    take the gamble on the bottle that's just almost right versus breaking their wallet on a hand matched bottle. 
+    Our custom mixer machine offers the same accuracy in skin tone while also promoting cheaper makeup,
+    sustainability, and waste-reduction. \\
 
-    %===========================SYSTEM OVERVIEW===========================
+    Our foundation color picker abandons the concept of creating a set of discrete skin tones to choose from,
+    instead, opting for custom mixed shades depending on the skin color detected by a picture. 
+    It also offers the unique ability to sample a shade without having to commit to a full sized bottle. 
 
-    \chapter{System Overview}
 
-    \section{Overall Architecture}
+    \subsection{Existing Solutions}
+    BoldHue provides an option for an AI powered foundation mixer. It matches skin tone through a smart wand 
+    that detects color. What they promised was millions of shades and the ability to store user's shades in profiles.
+    However, their color detection methods provide room for lots of error because color isn't percieved the same depending
+    on the lighting of the room, as well as the high cost of their machine. \\
+
+    Our product will have built in lighting correction that removes biases from the camera and uses the Macbeth Color Reference sheet 
+    as a set of control colors. The reference sheet is what will allow the machine to recallibrate it's understanding of what colors
+    are being percieved. 
+    
+
+    \section{Design Choices}
+    \subsection{Past Considerations and Scrapped Plans}
 
     %===========================HARDWARE DESIGN===========================
 
     \chapter{Hardware Design and Specifications}
 
-    \section{Bill of Materials}
-    \begin{table}[H]
+    \section{First Iteration}
+    \subsection{Initial CAD Model and Hand Sketches}
+    \begin{figure}[H]
         \centering
-        \begin{tabular}{l l l l}
-            \toprule
-            Component & Purpose & Quantity & Price \\ 
-            \midrule
-            Raspberry Pi 5 (4GB RAM) & Primary controller & 1 & \$66.00 \\
-            Raspberry Pi 5 Power Supply  & Powers Raspberry Pi & 1 & \$15.99 \\
-            DRV8825 Stepper Driver Module 5PCS & Drives stepper motors & 1 & \$10.56 \\
-            NEMA 17 Pancake Stepper Motor 5PCS & Pushes lead screws & 1 & \$32.99 \\
-            Limit Switch 10PCS & Detects plunger & 1 & \$5.99 \\
-            DC 12V 5A Power Supply & Powers motors & 1 & \$19.99 \\
-            Arducam V3 Camera & Captures samples & 1 & \$25.00 \\
-            Wiring & Connects electrical  & Bulk & \$5.00 \\
-            Breadboard / Perfboard & Circuit layout & 1 & \$10.00 \\
-            Lead Screw with T8 Brass Nut 2PCS & Pushes on syringe & 3 & \$13.99 \\
-            Lead Screw Coupler 5PCS & Connects shaft to screw & 1 & \$15.99 \\
-            Linear Motion Rod Shaft Guide 2PCS & Syringe alignment & 3 & \$8.69 \\
-            Lead Screw Pillow Block Bearings 3PCS & Rotational support & 2 & \$8.99 \\
-            Plastic Syringes 5PCS & Dispensing containers & 1 & \$6.99 \\
-            \midrule
-            \textbf{Total Estimated Cost} & & & \textbf{\$315.53} \\
-            \bottomrule
+        \includegraphics[width=0.8\textwidth]{assets/init_sketch_housing.png}
+        \caption{First Sketch: Housing}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{assets/init_cad_housing1.png}
+        \includegraphics[width=0.4\textwidth]{assets/init_cad_housing2.png}
+        \caption{First CAD Models: Housing}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{assets/init_sketch_dispenser.png}
+        \caption{First Sketch: Dispenser Systems}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{assets/init_cad_dispenser.png}
+        \caption{First CAD Models: Dispenser Systems}
+    \end{figure}
+    \subsection{Commentary}
+    
+    \section{Second Iteration}
+    \subsection{Updated CAD Model}
+    \subsection{Commentary}
 
-        \end{tabular}
-        \caption{Key Hardware Elements.}
-        \label{tab:hardware}
-    \end{table}
-
-    \section{Sensors, Actuators, Drivers}
-
-    \section{Electrical Connections and Power Distributions}
-
-    \section{CAD Models}
-
-    \section{Methodology}
+    \section{Third Iteration}
+    \subsection{Final CAD Model}
+    \subsection{Final Manufacturing Drawings for Custom Parts}
+    \subsection{Commentary}
 
 
-    %===========================SOFTWARE DESIGN===========================
+    %===========================SOFTWARE DESIGN==========================
 
     \chapter{Software Design}
 
-    \section{Techstack}
-
-    \section{Control Logic}
-    % include userflow diagrams 
+    \section{First Iteration}
+    \subsection{Preliminary Diagrams}
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{assets/userflow.png}
-        \caption{User Flow Diagram}
+        \caption{Initial Flowchart for Control Logic}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{assets/pseudocode1.png}
+        \includegraphics[width=0.8\textwidth]{assets/pseudocode2.png}
+        \caption{Pseudocode: Image Processing Algorithms.}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{assets/pseudocode3.png}
+        \caption{Pseudocode: Embedded System.}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{assets/ui-landing.png}
+        \caption{UI/UX - Landing page.}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{assets/ui-load.png}
+        \includegraphics[width=0.4\textwidth]{assets/ui-color.png}
+        \caption{UI/UX - Loading the foundation shades.}
     \end{figure}
 
-    \section{Computer Vision Pipeline}
+    \subsection{User Flow Diagram}
+    % include userflow diagrams 
+    \subsection{Techstack}
+    Operating systems: Linux on Raspberry Pi\\
+    Libraries: OpenCV, NumPy, Pandas\\
+    Frameworks: React, Flask\\
+    Languages: Python\\
+    
+    \section{Second Iteration}
+    \subsection{Lo-fi/Mid-fi Designs}
+    \subsection{Basic Logic and Functionality}
+    \subsection{Core Features of Algorithm}
 
-    \section{Color Correction Algorithm}
-
-    \section{Foundation Formulation}
-
-    \section{Raspberry Pi Integration}
-
-    \section{User Interface}
-
-    \section{User Manual}
+    \section{Third Iteration}
+    \subsection{Final Product}
 
     %===========================ELECTRICAL ENGINEERING DESIGN===========================
 
     \chapter{Electrical Systems Design}
 
-    \section{Circuit Schematic and Breadboard Design}
+    \section{First Iteration}
+    \subsection{Initial Wiring Diagrams}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{assets/wiring.png}
+        \caption{Preliminary Wiring Diagram}
+    \end{figure}
+    \subsection{Initial Power Calculations}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l l c}
+            \toprule
+            Parameter & Symbol & Value \\ 
+            \midrule
+            Phase Current & I & 0.7 \\
+            Phase Resistance & R & 4.0 \\
+            Phases & -- & 2 \\
+            \bottomrule
 
-    \section{Signal Conditioning and Safety Considerations}
+        \end{tabular}
+        \caption{Power Calculations}
+        \label{tab:Electrical}
+    \end{table}
+    \[P_{motor}=2*I^2*R\]
+    \[P_{motor}=2*(0.7)^2*4.0=3.92*5=19.6W\]
+    \[P_{Raspberry Pi}=10W\]
+    \emph{\[P_{total}=10+19.6=30W\]}
 
-    %===========================RESULTS===========================
+    
 
-    \chapter{Results and Analysis}
+
+    \section{Second Iteration}
+    \subsection{Circuit Building}
+
+    \section{Third Iteration}
+    \subsection{Final Wiring Diagrams}
+    \subsection{Final Power Calculations}
+    \subsection{Circuitry}
+
+    %===========================FINAL PRODUCT===========================
+
+    \chapter{Final Product}
 
     \section{Testing Protocol}
 
-    \section{Color Accuracy}
+    \section{Integration}
 
     \section{System Performance}
 
@@ -194,32 +279,47 @@
 
     \chapter{Conclusion}
 
+    %===========================BILL OF MATERIALS===========================
+
+    \section{Bill of Materials}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l l c c}
+            \toprule
+            Component & Purpose & Quantity & Price \\ 
+            \midrule
+            2PC T8x8 Lead Screw with Brass Nut & Linear motion conversion & 3 & \$13.99 \\
+            5-8mm Lead Screw Coupler 5 pack & Connect motor to screw & 3 & \$8.69 \\
+            8x200mm Shaft Guide & Linear guidance & 3 & \$8.69 \\
+            8mm Flange Mounted Pillow Block Bearing & Support rotating shaft & 3 & \$8.99 \\
+            Raspberry Pi 5 (4GB RAM) & Primary controller & 1 & \$66.00 \\
+            Plastic 30mL Syringes (Pack of 5) & Fluid handling prototype & 1 & \$6.99 \\
+            Raspberry Pi 5 Power Supply & Power for controller & 1 & \$15.99 \\
+            Assorted Metric Fasteners (M2–M5) & Mechanical assembly & 1 & \$20.00 \\
+            Limit Switch (10 pack) & Motion limit detection & 1 & \$5.99 \\
+            Arducam V3 Camera & Vision and monitoring & 1 & \$25.00 \\
+            Wiring Kit & Electrical connections & 1 & \$5.00 \\
+            Breadboard / Perfboard & Circuit prototyping & 1 & \$10.00 \\
+            5V 3A DC Power Supply & General power source & 1 & \$7.47 \\
+            5 Sets 28BYJ-48 Stepper + ULN2003 Driver & Secondary actuation system & 5 & \$14.99 \\
+            1.75mm ABS Filament Reel (Black) & Structural printing material & 1 & \$16.99 \\
+            \midrule
+            \textbf{Total Estimated Cost} & & & \textbf{\$346.49} \\
+            \bottomrule
+
+        \end{tabular}
+        \caption{Key Hardware Elements.}
+        \label{tab:hardware}
+    \end{table}
+
     %===========================REFERENCES===========================
     
     \chapter*{References}
 
     \addcontentsline{toc}{chapter}{References}
 
-    %===========================SOFTWARE DESIGN===========================
-
-    \appendix
-
-    \chapter{Pseudocode Listings}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\textwidth]{assets/pseudocode1.png}
-        \includegraphics[width=0.8\textwidth]{assets/pseudocode2.png}
-        \caption{Pseudocode: Image Processing Algorithms.}
-    \end{figure}
-
-    \chapter{Wiring \& Safety}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\textwidth]{assets/wiring.png}
-        \caption{Wiring Diagram}
-    \end{figure}
-
-    \chapter{Data Schemas}
+    \bibliographystyle{unsrt} % Use a numeric style, "unsrt" sorts by order of appearance
+    \bibliography{authors} % Name of your .bib file (without the .bib extension)
 
 
 \end{document}
