@@ -16,7 +16,7 @@ const Header = () => {
               <Palette className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-xl font-semibold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              ChromaBlend
+              Foundation Fix
             </span>
           </Link>
 
