@@ -28,6 +28,18 @@ def analyze():
         return jsonify({"result": hex_color})
     except Exception as e:
         return jsonify({"error": str(e)}), 400
+    
+@app.route('/dispense', methods=['POST'])
+def dispense():
+    data = request.get_json()
+    color = data.get("color")
+    if not color:
+        return {"error": "No color provided"}, 400
+
+    # TODO: add your Pi dispensing code here
+    print(f"Dispensing foundation for color {color}")
+    # Example: trigger GPIO pins or send command to dispenser
+    return {"status": "dispensing started", "color": color}
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
