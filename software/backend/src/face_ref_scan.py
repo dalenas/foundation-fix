@@ -451,27 +451,20 @@ def extract_macbeth_patches(warped, rows=4, cols=6,
 
 # ---------- MAIN ----------
 
-def main():
-    # 1) Live feed: capture a frame when sheet is inside the box
+def get_face_codes():
     frame, sheet_box = capture_frame_with_sheet_box()
     if frame is None or sheet_box is None:
         print("No frame captured.")
         return
-
-    # 2) From that captured frame, run face detection
     face_roi = define_face(frame)
     skin_rgb = sample_skin_regions(face_roi)
-    print("\nSkin RGB array shape:", skin_rgb.shape)
-    np.save("skin_rgb.npy", skin_rgb)
-    print("Saved as skin_rgb.npy")
-    # 3) Process the sheet inside the box
+    print("\nSkin RGB array:", skin_rgb)
+    
     x1, y1, x2, y2 = sheet_box
     sheet_roi = frame[y1:y2, x1:x2]
 
-    # Optional: just for visualization / debugging
     detect_sheet(sheet_roi)
 
-    # <-- IMPORTANT: pass the IMAGE (sheet_roi), not the contour
     chart = crop_to_chart_only(sheet_roi, debug=True)
 
     patches = extract_macbeth_patches(
@@ -482,16 +475,6 @@ def main():
 
     rgb_array = np.array([p['mean_bgr'][::-1] for p in patches])  # reverse to RGB order
 
-    print("\nRGB array shape:", rgb_array.shape)
     print("RGB array:\n", rgb_array)
 
-    # Optional: reshape to match Macbeth layout (4 rows x 6 cols x 3 channels)
-    rgb_grid = rgb_array.reshape((4, 6, 3))
-    print("\nRGB grid shape:", rgb_grid.shape)
-
-    # If you want to save it for later use:
-    np.save("macbeth_rgb.npy", rgb_grid)
-    print("Saved as macbeth_rgb.npy")
-
-if __name__ == '__main__':
-    main()
+    return skin_rgb, rgb_array
