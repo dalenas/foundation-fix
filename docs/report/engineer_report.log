@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  12 NOV 2025 15:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  27 OCT 2025 00:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/biggestpp/foundation-fix/docs/report/engineer_report.tex
-(/Users/biggestpp/foundation-fix/docs/report/engineer_report.tex
+**/Users/biggestpp/engineering-project/docs/report/engineer_report.tex
+(/Users/biggestpp/engineering-project/docs/report/engineer_report.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/base/report.cls
@@ -534,7 +534,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.86     \chapter
                  {Introduction} [1
 
-]
+{/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 Chapter 2.
 [2
 
@@ -561,7 +561,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 Chapter 5.
-<assets/userflow.png, id=234, 575.14874pt x 399.4925pt>
+<assets/userflow.png, id=235, 575.14874pt x 399.4925pt>
 File: assets/userflow.png Graphic file (type png)
 <use assets/userflow.png>
 Package pdftex.def Info: assets/userflow.png  used on input line 151.
@@ -596,12 +596,12 @@ Chapter 9.
 
 ]
 Appendix A.
-<assets/pseudocode1.png, id=266, 824.07875pt x 652.4375pt>
+<assets/pseudocode1.png, id=267, 824.07875pt x 652.4375pt>
 File: assets/pseudocode1.png Graphic file (type png)
 <use assets/pseudocode1.png>
 Package pdftex.def Info: assets/pseudocode1.png  used on input line 210.
 (pdftex.def)             Requested size: 375.80544pt x 297.53648pt.
-<assets/pseudocode2.png, id=267, 1194.4625pt x 472.76625pt>
+<assets/pseudocode2.png, id=268, 1194.4625pt x 472.76625pt>
 File: assets/pseudocode2.png Graphic file (type png)
 <use assets/pseudocode2.png>
 Package pdftex.def Info: assets/pseudocode2.png  used on input line 211.
@@ -621,7 +621,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14 <./assets/pseudocode1.png> <./assets/pseudocode2.png>]
 Appendix B.
-<assets/wiring.png, id=279, 736.7525pt x 739.76375pt>
+<assets/wiring.png, id=280, 736.7525pt x 739.76375pt>
 File: assets/wiring.png Graphic file (type png)
 <use assets/wiring.png>
 Package pdftex.def Info: assets/wiring.png  used on input line 218.
@@ -641,18 +641,18 @@ Package rerunfilecheck Info: File `engineer_report.out' has not changed.
 (rerunfilecheck)             Checksum: 97A76CD4C3BC1905657985A3F9B6FCB5;5235.
  ) 
 Here is how much of TeX's memory you used:
- 14779 strings out of 474116
- 231454 string characters out of 5734122
+ 14783 strings out of 474116
+ 231511 string characters out of 5734122
  1941187 words of memory out of 5000000
- 36888 multiletter control sequences out of 15000+600000
- 574471 words of font info for 77 fonts, out of 8000000 for 9000
+ 36890 multiletter control sequences out of 15000+600000
+ 574808 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,393b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,398b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on engineer_report.pdf (19 pages, 1387035 bytes).
+Output written on engineer_report.pdf (19 pages, 1388052 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
+ 345 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
  59 named destinations out of 1000 (max. 500000)
  309 words of extra memory for PDF output out of 10000 (max. 10000000)
 
