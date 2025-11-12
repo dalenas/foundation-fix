@@ -1,8 +1,14 @@
 # Engineering Project - Foundation Mixture Creator
-## Before PM5
-- finish all code
-- update engineer report as we go
-- begin testing
+## Before PM7
+- ALL PARTS INTEGRATED
+- final product should be useable
+- final parts that we need are
+  - recipe creation algo
+  - front end and back end integrated
+  - final cads are done but drawings need to be cleaned up
+  - final report
+- business pitch
+- live demo of final product --> launched from iphone
 
 ---
 
@@ -21,7 +27,13 @@ git checkout -b new_branch_name
 
 ### backend development
 **feature/image-processing** related to image processing algorithms that gamma correct and adjust for inconsistent lighting
-**feature/region-of-interest** related to image capture and defining skin/reference card regions
+**closed** *feature/region-of-interest* related to image capture and defining skin/reference card regions
+**feature/recipe** related to the creation of the physical formula and translating it to servo turns
+
+### frontend teams
+**ivalm-frontend** ival's edits only. no one else should touch this branch
+**webpage-ui-harmeet** harmeet's edits only. no on elese should touch this branch
+**webpage-ui** updates for webage
 
 ### hardware/electrical teams
 **file-update** place to upload files like CAD or electrical system diagrams
