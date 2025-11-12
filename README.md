@@ -1,13 +1,14 @@
 # Engineering Project - Foundation Mixture Creator
-## Before PM6
-- merge frontend and backend
-- software electrical component integration
-- wokring demo for each sub team
-- engineering project progress and report
-- individual progress slides
-- begin testing
-- finaltech stack
-- main program that integrates all
+## Before PM7
+- ALL PARTS INTEGRATED
+- final product should be useable
+- final parts that we need are
+  - recipe creation algo
+  - front end and back end integrated
+  - final cads are done but drawings need to be cleaned up
+  - final report
+- business pitch
+- live demo of final product --> launched from iphone
 
 ---
 
@@ -26,10 +27,13 @@ git checkout -b new_branch_name
 
 ### backend development
 **feature/image-processing** related to image processing algorithms that gamma correct and adjust for inconsistent lighting
+**closed** *feature/region-of-interest* related to image capture and defining skin/reference card regions
+**feature/recipe** related to the creation of the physical formula and translating it to servo turns
 
-**feature/region-of-interest** related to image capture and defining skin/reference card regions
-
-**webpage-ui** basic for front end development please add however many branches you need
+### frontend teams
+**ivalm-frontend** ival's edits only. no one else should touch this branch
+**webpage-ui-harmeet** harmeet's edits only. no on elese should touch this branch
+**webpage-ui** updates for webage
 
 ### hardware/electrical teams
 **file-update** place to upload files like CAD or electrical system diagrams
