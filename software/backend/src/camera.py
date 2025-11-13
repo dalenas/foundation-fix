@@ -1,1 +1,0 @@
-# finish by PM5. camera capture and image validation
