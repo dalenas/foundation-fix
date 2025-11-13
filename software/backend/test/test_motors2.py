@@ -8,7 +8,7 @@ IN4 = 26
 
 pins = [IN1, IN2, IN3, IN4]
 
-STEPS_NEEDED = 9240
+STEPS_NEEDED = 2000
 DELAY = 0.001
 
 # reverse order of halfstep sequence
