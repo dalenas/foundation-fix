@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex engineer_report"] 1763419443.66118 "engineer_report.aux" "engineer_report.bbl" "engineer_report" 1763419469.62632 0
+["bibtex engineer_report"] 1763419697.75265 "engineer_report.aux" "engineer_report.bbl" "engineer_report" 1763419707.10659 0
   "./authors.bib" 1763419433.63 406 cb1d22c15b292e6c69a5c55c491b7ce1 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/bibtex/bst/base/unsrt.bst" 1710106625 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "engineer_report.aux" 1763419466.85488 10669 ad6c23014814f4254fdb0bdfe050052b "pdflatex"
+  "engineer_report.aux" 1763419704.70015 10825 a27e9619b35a271c9c05fb320170e2c5 "pdflatex"
   (generated)
   "engineer_report.bbl"
   "engineer_report.blg"
   (rewritten before read)
-["pdflatex"] 1763419444.40474 "/Users/biggestpp/foundation-fix/docs/report/engineer_report.tex" "engineer_report.pdf" "engineer_report" 1763419469.62789 0
-  "/Users/biggestpp/foundation-fix/docs/report/engineer_report.tex" 1763419434.74292 18042 91d690af059f51bbf0a33b156dcff4e3 ""
+["pdflatex"] 1763419697.98679 "/Users/biggestpp/foundation-fix/docs/report/engineer_report.tex" "engineer_report.pdf" "engineer_report" 1763419707.10865 0
+  "/Users/biggestpp/foundation-fix/docs/report/engineer_report.tex" 1763419613.71883 18250 47ab8f91801e23d441e3e1061434451d ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1710106625 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/map/fontname/texfonts.map" 1710106625 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1710106625 5472554 f7861620179a71a79d4bd86251f559d0 ""
@@ -159,17 +159,18 @@
   "assets/third_it/ME_case_lid.jpeg" 1763419433.4398 70504 98101e5ccab9f847ead7d2b4dafef4c4 ""
   "assets/third_it/ME_case_side_wall.png" 1763419433.46406 141131 4e2b9c06f619080a32f7accad8a53969 ""
   "assets/third_it/ME_case_skeleton_frame.png" 1763419433.47832 336228 585882f5a724d1b4deb5c66a369ee774 ""
+  "assets/third_it/ME_dispenser_mechanism_assembly.png" 1763419433.49365 163884 f71f2abc793d7b7c1f3bf2536a5106e8 ""
   "assets/third_it/ME_full_device_assembly.png" 1763419433.51066 211665 f71ee2c02b096bc6ee3e6ca1c9352c50 ""
   "assets/third_it/ME_l_bracket.png" 1763419433.58793 364079 88c871534b81d95c7e0ae77652cd147a ""
   "assets/third_it/ME_plunger_bracket.png" 1763419433.60771 341693 af99a29b3ae439367e762794cf95fa03 ""
   "assets/third_it/ME_syringe_bracket.png" 1763419433.62747 320265 14bdd1828c8c41268e7b174cdaec5642 ""
-  "engineer_report.aux" 1763419466.85488 10669 ad6c23014814f4254fdb0bdfe050052b "pdflatex"
-  "engineer_report.bbl" 1763419444.39723 212 55b5aa160abec1ed1bb0fcf7e12ce592 "bibtex engineer_report"
-  "engineer_report.lof" 1763419466.86569 2603 d09473de2b83909c2b8029f8f09ec6a6 "pdflatex"
-  "engineer_report.lot" 1763419466.866 360 f0d8e6f69810042c6d8116ed4357d094 "pdflatex"
-  "engineer_report.out" 1763419466.86326 7214 4b09c8a6fd71a50af2a4495d3ea9228c "pdflatex"
-  "engineer_report.tex" 1763419434.74292 18042 91d690af059f51bbf0a33b156dcff4e3 ""
-  "engineer_report.toc" 1763419466.86532 4011 6cd75cee7588d74a115f6b8fa7ec061b "pdflatex"
+  "engineer_report.aux" 1763419704.70015 10825 a27e9619b35a271c9c05fb320170e2c5 "pdflatex"
+  "engineer_report.bbl" 1763419697.9505 212 55b5aa160abec1ed1bb0fcf7e12ce592 "bibtex engineer_report"
+  "engineer_report.lof" 1763419704.70313 2718 f8e7a007de37f3d37016d710031b0525 "pdflatex"
+  "engineer_report.lot" 1763419704.70319 360 78cf6f95da30abfe68b0cd6b32a9c123 "pdflatex"
+  "engineer_report.out" 1763419704.70263 7214 3ff9466190db4c863c4e06d7d9c96ebd "pdflatex"
+  "engineer_report.tex" 1763419613.71883 18250 47ab8f91801e23d441e3e1061434451d ""
+  "engineer_report.toc" 1763419704.70308 4011 53ba198bc644b98394e7677af97a3851 "pdflatex"
   (generated)
   "engineer_report.aux"
   "engineer_report.lof"
