@@ -1,1 +1,0 @@
-# communication with hardware and conversion of paint quantities to servo turns
