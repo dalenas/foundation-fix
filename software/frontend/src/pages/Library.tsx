@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Plus, Search, Heart, Edit, Trash2 } from "lucide-react";
-import Header from "@/components/Header";
+import { Plus, Search, Heart, Edit, Trash2, Palette, Cpu, Image, User } from "lucide-react";
 import { toast } from "sonner";
 
 interface Formula {
@@ -20,6 +20,8 @@ const PROFILE_STORAGE_KEY = "foundation-fix-profile";
 const FORMULA_STORAGE_PREFIX = "foundation-fix-formulas-";
 
 const Library = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [searchQuery, setSearchQuery] = useState("");
   const [formulas, setFormulas] = useState<Formula[]>([]);
   const [isEditing, setIsEditing] = useState(false);
@@ -33,6 +35,8 @@ const Library = () => {
     finish: "",
     favorite: false,
   });
+
+  const isActive = (path: string) => location.pathname === path;
 
   // Determine profile key (based on profile email) and load formulas for that profile
   useEffect(() => {
@@ -164,9 +168,46 @@ const Library = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {/* Navigation */}
+      <nav className="flex items-center justify-between p-6 bg-background border-b border-border">
+        <div 
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+            <Palette className="w-6 h-6 text-white" />
+          </div>
+          <span className="text-xl font-semibold text-primary">Foundation Fix</span>
+        </div>
+        <div className="flex items-center gap-6">
+          <Button 
+            variant={isActive("/device") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/device")}
+          >
+            <Cpu className="w-4 h-4" />
+            Raspberry Pi
+          </Button>
+          <Button 
+            variant={isActive("/library") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/library")}
+          >
+            <Image className="w-4 h-4" />
+            Library
+          </Button>
+          <Button 
+            variant={isActive("/profile") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/profile")}
+          >
+            <User className="w-4 h-4" />
+            Profile
+          </Button>
+        </div>
+      </nav>
 
-      <main className="pt-24 pb-12">
+      <main className="py-20 px-4">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="flex items-center justify-between mb-8">
             <div>
