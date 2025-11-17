@@ -14,13 +14,11 @@ import numpy as np
 image_codes = scan.get_face_codes()
 if image_codes is None:
     print("get_face_codes() returned None")
-    return
 
 skin_gamma, ref_gamma = image_codes
 
 if skin_gamma.size == 0 or ref_gamma.size == 0:
     print("Failed to capture valid skin or reference RGB codes.")
-    return
 
 skin_linear = rtl.gamma_to_linear(skin_gamma)
 ref_linear = rtl.gamma_to_linear(ref_gamma)
