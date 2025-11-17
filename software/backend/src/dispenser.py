@@ -3,12 +3,13 @@ import numpy as np
 import time
 
 import lab_to_mix as ltm
+from lib import constants as const
 
-WHITE_MOTOR_PINS = [24, 25, 8, 7]
-BLACK_MOTOR_PINS = [10, 9, 11, 5]
-RED_MOTOR_PINS = [6, 13, 19, 26]
-BLUE_MOTOR_PINS = [14, 15, 18, 23]
-YELLOW_MOTOR_PINS = [12, 16, 20, 21]
+WHITE_MOTOR_PINS = np.array([24, 25, 8, 7])
+BLACK_MOTOR_PINS = np.array([10, 9, 11, 5])
+RED_MOTOR_PINS = np.array([6, 13, 19, 26])
+BLUE_MOTOR_PINS = np.array([14, 15, 18, 23])
+YELLOW_MOTOR_PINS = np.array([12, 16, 20, 21])
 
 WHITE_SWITCH_PIN = 2
 BLACK_SWITCH_PIN = 27
@@ -22,7 +23,7 @@ RED_IND = 2
 BLUE_IND = 3
 YELLOW_IND = 4
 
-DISPENSE_SEQUENCE = [
+DISPENSE_SEQUENCE = np.array([
     [1, 0, 0, 1],
     [0, 0, 0, 1],
     [0, 0, 1, 1],
@@ -31,8 +32,8 @@ DISPENSE_SEQUENCE = [
     [0, 1, 0, 0],
     [1, 1, 0, 0],
     [1, 0, 0, 0],
-]
-EXTRACT_SEQUENCE = [
+])
+EXTRACT_SEQUENCE = np.array([
     [1, 0, 0, 0],
     [1, 1, 0, 0],
     [0, 1, 0, 0],
@@ -41,15 +42,7 @@ EXTRACT_SEQUENCE = [
     [0, 0, 1, 1],
     [0, 0, 0, 1],
     [1, 0, 0, 1],   
-]
-
-BASE_LABS = np.array([
-        [98.5,  0.4,   1.2],   # White
-        [ 6.2,  0.0,   0.0],   # Black
-        [45.0, 55.0,  20.0],   # Red
-        [35.0, 10.0, -45.0],   # Blue
-        [85.0, -5.0,  80.0],   # Yellow
-    ])
+])
 
 STEPS_5ML = 825
 DELAY = 0.001
@@ -63,7 +56,7 @@ def initialize_switch(switch_pin):
     lgpio.gpio_claim_input(CHIP, switch_pin, lgpio.SET_PULL_UP)
 
 def calculate_steps(lab_code):
-    prop = ltm.lab_linear_mix_proportions(BASE_LABS, lab_code)
+    prop = ltm.lab_linear_mix_proportions(const.BASE_LABS, lab_code)
     return np.round(STEPS_5ML * prop).astype(int)
     
 

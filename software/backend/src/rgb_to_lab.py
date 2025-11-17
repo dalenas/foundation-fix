@@ -1,6 +1,6 @@
 import numpy as np
 
-from ..lib import constants as const
+from lib import constants as const
 
 def gamma_to_linear(gamma_codes):
     norm_rgb = gamma_codes / const.WHITEPOINT_D65
