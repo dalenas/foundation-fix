@@ -18,7 +18,7 @@ import {
 import Header from "@/components/Header";
 import { toast } from "sonner";
 
-const BACKEND_URL = "http://127.0.0.1:5000";
+const BACKEND_URL = "http://172.20.10.2";
 
 const Device = () => {
   const [isConnected, setIsConnected] = useState(false);
