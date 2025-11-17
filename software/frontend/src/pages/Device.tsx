@@ -205,7 +205,7 @@ const Device = () => {
     }
 
     if (!backendOnline) {
-      toast.error("Backend (main.py) is not running on 127.0.0.1:5000.");
+      toast.error("Backend (main.py) is not running on 172.20.10.2:8080.");
       return;
     }
 
@@ -244,7 +244,7 @@ const Device = () => {
     if (!analysisResult) return;
 
     if (!backendOnline) {
-      toast.error("Backend (main.py) is not running on 127.0.0.1:5000.");
+      toast.error("Backend (main.py) is not running on 172.20.10.2:8080.");
       return;
     }
 
@@ -277,7 +277,7 @@ const Device = () => {
           <p className="text-muted-foreground">
             {backendOnline
               ? "Local backend (main.py) is connected and ready."
-              : "Backend is offline. Start main.py on 127.0.0.1:5000 to analyze."}
+              : "Backend is offline. Start main.py on 172.20.10.2:8080 to analyze."}
           </p>
 
           {/* Connection card */}
