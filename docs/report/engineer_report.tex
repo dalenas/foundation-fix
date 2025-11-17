@@ -4,10 +4,7 @@
 \iffalse All to do
 
 -----RIGHT NOW (THUR/FRI)
-HARDWARE: 
-    second iteration    - add cads
-                        - add commentary
-    third iteration     - add all final cads
+HARDWARE:               - commentary for final
 SOFTWARE:
     first iteration     - add a small paragraph for each Parts
     second iteration    - lofi/midfi designs - find out what this is and add them
@@ -205,7 +202,6 @@ Conclusion
         \includegraphics[width=0.8\textwidth]{assets/first_it/ME_init_cad_dispenser.png}
         \caption{First CAD Models: Dispenser Systems}
     \end{figure}
-    \subsection{Commentary}
 
     Our first CAD Models were very simple and provide the most general idea 
     we had at our projects conception. We made large changes to the design of
@@ -240,6 +236,12 @@ Conclusion
         \caption{Second Iteration: Housing Skeleton and Walls}
     \end{figure}
 
+    The housing skeleton is what holds the syringes in place while the walls create an enclosure
+    so that the internal structure may be protected and hidden from users. The main concern with 
+    this iterations design was with the housing skeleton's stability. Since we were 3D printing 
+    all parts for the demo, the empy spaces could be flimsy, so the final iteration includes a 
+    redesign. 
+
     \textbf{\textit{Dispenser}}
     \begin{figure}[H]
         \centering
@@ -249,22 +251,13 @@ Conclusion
         \caption{Second Iteration: Brackets for Dispenser System}
     \end{figure}
 
-    \subsection{Commentary}
-    \textbf{\textit{Housing}}
-
-    The housing skeleton is what holds the syringes in place while the walls create an enclosure
-    so that the internal structure may be protected and hidden from users. The main concern with 
-    this iterations design was with the housing skeleton's stability. Since we were 3D printing 
-    all parts for the demo, the empy spaces could be flimsy, so the final iteration includes a 
-    redesign. 
-    \pagebreak
-
-    \textbf{\textit{Dispenser}}
-
     These brackets hold and control the dispenser system. The first L-shaped Bracket holds 
     the guide shaft in place. The other two are for stabilizing and pushing the syringe 
     plunger down. This second iteration is missing one of the parts but it will be shown 
     in the next section, along with final drawings of all parts. 
+   
+    \pagebreak
+
 
     \section{Third Iteration}
     \subsection{Final CAD Models}
@@ -293,6 +286,12 @@ Conclusion
         \includegraphics[width=0.8\textwidth]{assets/third_it/ME_case_skeleton_frame.png}
         \caption{Housing: Skeleton}
     \end{figure}
+
+    The Housing walls were altered to include a slit because there are some screws in the 
+    skeleton of the product that would press up against the walls if we kept the second iteration's
+    design. The slit was created to give the screws space and ensure that the components inside 
+    are not putting pressure on each other. 
+
     \pagebreak
 
     \textbf{\textit{Dispenser}}
@@ -311,8 +310,13 @@ Conclusion
         \caption{Dispenser System : Full assembly}
     \end{figure}
 
+    The final iteration finalizes all brackets needed for the dispenser system, and includes a
+    complete view of all the parts put together. We have included a L-bracket that connects the 
+    dispenser to the casing, an L bracket that holds the guide rod, a syringe bracket to stabilize
+    and hold the syringe in place, and finally, the plate that holds the plunger, and moves with
+    the screw to push the plunger down. 
+
     \subsection{Final Manufacturing Drawings for Custom Parts}
-    \subsection{Commentary}
 
 
     %===========================SOFTWARE DESIGN==========================
@@ -326,17 +330,25 @@ Conclusion
         \includegraphics[width=0.8\textwidth]{assets/first_it/CS_userflow.png}
         \caption{Initial Flowchart for Control Logic}
     \end{figure}
+
+    \subsection{User Flow Diagram}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\textwidth]{assets/first_it/CS_pseudocode1.png}
-        \includegraphics[width=0.8\textwidth]{assets/first_it/CS_pseudocode2.png}
-        \caption{Pseudocode: Image Processing Algorithms.}
+        \includegraphics[width=0.8\textwidth]{assets/first_it/CS_userflowfinal.png}
+        \caption{User Flow Diagram}
     \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\textwidth]{assets/first_it/CS_pseudocode3.png}
-        \caption{Pseudocode: Embedded System.}
-    \end{figure}
+    \subsection{Techstack}
+    Operating systems: Linux on Raspberry Pi
+
+    Libraries: OpenCV, NumPy, Pandas, Haar Cascade Classifier
+
+    Frameworks: React
+
+    Languages: Python
+
+    
+    \section{Second Iteration}
+    \subsection{Lo-fi/Mid-fi Designs}
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\textwidth]{assets/first_it/CS_ui-landing.png}
@@ -349,25 +361,19 @@ Conclusion
         \caption{Initial Figma Mockup: UI/UX - Loading the foundation shades.}
     \end{figure}
 
-    \subsection{User Flow Diagram}
+    
+    \subsection{Basic Logic and Functionality}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\textwidth]{assets/first_it/CS_userflowfinal.png}
-        \caption{User Flow Diagram}
+        \includegraphics[width=0.8\textwidth]{assets/first_it/CS_pseudocode1.png}
+        \includegraphics[width=0.8\textwidth]{assets/first_it/CS_pseudocode2.png}
+        \caption{Pseudocode: Image Processing Algorithms.}
     \end{figure}
-    \subsection{Techstack}
-    Operating systems: Linux on Raspberry Pi
-
-    Libraries: OpenCV, NumPy, Pandas
-
-    Frameworks: React, Flask
-
-    Languages: Python
-
-    
-    \section{Second Iteration}
-    \subsection{Lo-fi/Mid-fi Designs}
-    \subsection{Basic Logic and Functionality}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{assets/first_it/CS_pseudocode3.png}
+        \caption{Pseudocode: Embedded System.}
+    \end{figure}
     \subsection{Core Features of Algorithm}
 
     \section{Third Iteration}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  13 NOV 2025 13:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  14 NOV 2025 02:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -417,7 +417,7 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 89.
+Package hyperref Info: Option `colorlinks' set `true' on input line 86.
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
@@ -425,24 +425,24 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 ) (./engineer_report.aux)
 \openout1 = `engineer_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -501,23 +501,23 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 108.
+Package hyperref Info: Link coloring ON on input line 105.
  (./engineer_report.out) (./engineer_report.out)
 \@outlinefile=\write3
 \openout3 = `engineer_report.out'.
 
 \c@lstlisting=\count322
-LaTeX Font Info:    Trying to load font information for U+msa on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108.
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108.
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 115.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 112.
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) (./engineer_report.toc [1])
@@ -538,7 +538,7 @@ Chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.143     \chapter
+l.140     \chapter
                   {Introduction} [1
 
 ]
@@ -547,20 +547,20 @@ Chapter 2.
 
 ] [3]
 Chapter 3.
-<assets/first_it/ME_init_sketch_housing.png, id=342, 408.52625pt x 454.69875pt>
+<assets/first_it/ME_init_sketch_housing.png, id=326, 408.52625pt x 454.69875pt>
 File: assets/first_it/ME_init_sketch_housing.png Graphic file (type png)
 <use assets/first_it/ME_init_sketch_housing.png>
-Package pdftex.def Info: assets/first_it/ME_init_sketch_housing.png  used on input line 189.
+Package pdftex.def Info: assets/first_it/ME_init_sketch_housing.png  used on input line 186.
 (pdftex.def)             Requested size: 375.80544pt x 418.30017pt.
-<assets/first_it/ME_init_cad_housing1.png, id=344, 466.74374pt x 406.51875pt>
+<assets/first_it/ME_init_cad_housing1.png, id=328, 466.74374pt x 406.51875pt>
 File: assets/first_it/ME_init_cad_housing1.png Graphic file (type png)
 <use assets/first_it/ME_init_cad_housing1.png>
-Package pdftex.def Info: assets/first_it/ME_init_cad_housing1.png  used on input line 194.
+Package pdftex.def Info: assets/first_it/ME_init_cad_housing1.png  used on input line 191.
 (pdftex.def)             Requested size: 187.89914pt x 163.65291pt.
-<assets/first_it/ME_init_cad_housing2.png, id=345, 423.5825pt x 415.5525pt>
+<assets/first_it/ME_init_cad_housing2.png, id=329, 423.5825pt x 415.5525pt>
 File: assets/first_it/ME_init_cad_housing2.png Graphic file (type png)
 <use assets/first_it/ME_init_cad_housing2.png>
-Package pdftex.def Info: assets/first_it/ME_init_cad_housing2.png  used on input line 195.
+Package pdftex.def Info: assets/first_it/ME_init_cad_housing2.png  used on input line 192.
 (pdftex.def)             Requested size: 187.89914pt x 184.33376pt.
 [4
 
@@ -568,4 +568,212 @@ Package pdftex.def Info: assets/first_it/ME_init_cad_housing2.png  used on input
 Overfull \vbox (52.59877pt too high) has occurred while \output is active []
 
  [5 <./assets/first_it/ME_init_sketch_housing.png>]
-<assets/first_it/ME_in
+<assets/first_it/ME_init_sketch_dispenser.png, id=340, 960.58875pt x 439.6425pt>
+File: assets/first_it/ME_init_sketch_dispenser.png Graphic file (type png)
+<use assets/first_it/ME_init_sketch_dispenser.png>
+Package pdftex.def Info: assets/first_it/ME_init_sketch_dispenser.png  used on input line 197.
+(pdftex.def)             Requested size: 375.80544pt x 171.99655pt.
+<assets/first_it/ME_init_cad_dispenser.png, id=341, 475.7775pt x 369.38pt>
+File: assets/first_it/ME_init_cad_dispenser.png Graphic file (type png)
+<use assets/first_it/ME_init_cad_dispenser.png>
+Package pdftex.def Info: assets/first_it/ME_init_cad_dispenser.png  used on input line 202.
+(pdftex.def)             Requested size: 375.80544pt x 291.77881pt.
+ [6 <./assets/first_it/ME_init_cad_housing1.png> <./assets/first_it/ME_init_cad_housing2.png> <./assets/first_it/ME_init_sketch_dispenser.png>] [7 <./assets/first_it/ME_init_cad_dispenser.png>]
+<assets/second_it/ME_full_assembly.png, id=354, 766.865pt x 431.6125pt>
+File: assets/second_it/ME_full_assembly.png Graphic file (type png)
+<use assets/second_it/ME_full_assembly.png>
+Package pdftex.def Info: assets/second_it/ME_full_assembly.png  used on input line 221.
+(pdftex.def)             Requested size: 375.80544pt x 211.51831pt.
+<assets/second_it/ME_exploded.png, id=355, 756.8275pt x 431.6125pt>
+File: assets/second_it/ME_exploded.png Graphic file (type png)
+<use assets/second_it/ME_exploded.png>
+Package pdftex.def Info: assets/second_it/ME_exploded.png  used on input line 226.
+(pdftex.def)             Requested size: 375.80544pt x 214.3173pt.
+ [8 <./assets/second_it/ME_full_assembly.png> <./assets/second_it/ME_exploded.png>]
+<assets/second_it/ME_housing_skeleton.png, id=363, 348.30125pt x 450.68375pt>
+File: assets/second_it/ME_housing_skeleton.png Graphic file (type png)
+<use assets/second_it/ME_housing_skeleton.png>
+Package pdftex.def Info: assets/second_it/ME_housing_skeleton.png  used on input line 234.
+(pdftex.def)             Requested size: 187.89914pt x 243.13177pt.
+<assets/second_it/ME_housing_walls.png, id=364, 235.88126pt x 388.45125pt>
+File: assets/second_it/ME_housing_walls.png Graphic file (type png)
+<use assets/second_it/ME_housing_walls.png>
+Package pdftex.def Info: assets/second_it/ME_housing_walls.png  used on input line 235.
+(pdftex.def)             Requested size: 150.32504pt x 247.5588pt.
+<assets/second_it/ME_guide_shaft_bracket.png, id=365, 363.3575pt x 226.8475pt>
+File: assets/second_it/ME_guide_shaft_bracket.png Graphic file (type png)
+<use assets/second_it/ME_guide_shaft_bracket.png>
+Package pdftex.def Info: assets/second_it/ME_guide_shaft_bracket.png  used on input line 248.
+(pdftex.def)             Requested size: 187.89914pt x 117.31062pt.
+<assets/second_it/ME_syringe_holder_bracket.png, id=366, 233.87375pt x 234.8775pt>
+File: assets/second_it/ME_syringe_holder_bracket.png Graphic file (type png)
+<use assets/second_it/ME_syringe_holder_bracket.png>
+Package pdftex.def Info: assets/second_it/ME_syringe_holder_bracket.png  used on input line 249.
+(pdftex.def)             Requested size: 117.43875pt x 117.94379pt.
+<assets/second_it/ME_syringe_plunger_bracket.png, id=367, 201.75375pt x 208.78pt>
+File: assets/second_it/ME_syringe_plunger_bracket.png Graphic file (type png)
+<use assets/second_it/ME_syringe_plunger_bracket.png>
+Package pdftex.def Info: assets/second_it/ME_syringe_plunger_bracket.png  used on input line 250.
+(pdftex.def)             Requested size: 117.43875pt x 121.52892pt.
+ [9 <./assets/second_it/ME_housing_skeleton.png> <./assets/second_it/ME_housing_walls.png> <./assets/second_it/ME_guide_shaft_bracket.png> <./assets/second_it/ME_syringe_holder_bracket.png> <./assets/second_it/ME_syringe_plunger_bracket.png>]
+<assets/third_it/ME_full_device_assembly.png, id=378, 740.0147pt x 563.85657pt>
+File: assets/third_it/ME_full_device_assembly.png Graphic file (type png)
+<use assets/third_it/ME_full_device_assembly.png>
+Package pdftex.def Info: assets/third_it/ME_full_device_assembly.png  used on input line 267.
+(pdftex.def)             Requested size: 469.75502pt x 357.93309pt.
+ [10 <./assets/third_it/ME_full_device_assembly.png>]
+<assets/third_it/ME_case_back_wall.png, id=384, 1122.1925pt x 1502.61375pt>
+File: assets/third_it/ME_case_back_wall.png Graphic file (type png)
+<use assets/third_it/ME_case_back_wall.png>
+Package pdftex.def Info: assets/third_it/ME_case_back_wall.png  used on input line 275.
+(pdftex.def)             Requested size: 187.89914pt x 251.58905pt.
+<assets/third_it/ME_case_side_wall.png, id=385, 998.73125pt x 1514.65875pt>
+File: assets/third_it/ME_case_side_wall.png Graphic file (type png)
+<use assets/third_it/ME_case_side_wall.png>
+Package pdftex.def Info: assets/third_it/ME_case_side_wall.png  used on input line 276.
+(pdftex.def)             Requested size: 164.41711pt x 249.35323pt.
+<assets/third_it/ME_case_lid.jpeg, id=386, 2055.68pt x 1287.81125pt>
+File: assets/third_it/ME_case_lid.jpeg Graphic file (type jpg)
+<use assets/third_it/ME_case_lid.jpeg>
+Package pdftex.def Info: assets/third_it/ME_case_lid.jpeg  used on input line 281.
+(pdftex.def)             Requested size: 187.89914pt x 117.70584pt.
+<assets/third_it/ME_case_skeleton_frame.png, id=387, 1137.24875pt x 1567.8575pt>
+File: assets/third_it/ME_case_skeleton_frame.png Graphic file (type png)
+<use assets/third_it/ME_case_skeleton_frame.png>
+Package pdftex.def Info: assets/third_it/ME_case_skeleton_frame.png  used on input line 286.
+(pdftex.def)             Requested size: 375.80544pt x 518.11229pt.
+ [11 <./assets/third_it/ME_case_back_wall.png> <./assets/third_it/ME_case_side_wall.png> <./assets/third_it/ME_case_lid.jpeg>] [12 <./assets/third_it/ME_case_skeleton_frame.png>]
+<assets/third_it/ME_case_l_bracket.png, id=399, 1473.505pt x 1323.94624pt>
+File: assets/third_it/ME_case_l_bracket.png Graphic file (type png)
+<use assets/third_it/ME_case_l_bracket.png>
+Package pdftex.def Info: assets/third_it/ME_case_l_bracket.png  used on input line 300.
+(pdftex.def)             Requested size: 152.66895pt x 137.17pt.
+<assets/third_it/ME_l_bracket.png, id=400, 2050.66125pt x 1645.14626pt>
+File: assets/third_it/ME_l_bracket.png Graphic file (type png)
+<use assets/third_it/ME_l_bracket.png>
+Package pdftex.def Info: assets/third_it/ME_l_bracket.png  used on input line 301.
+(pdftex.def)             Requested size: 176.15813pt x 141.3041pt.
+<assets/third_it/ME_syringe_bracket.png, id=401, 1424.32124pt x 1375.1375pt>
+File: assets/third_it/ME_syringe_bracket.png Graphic file (type png)
+<use assets/third_it/ME_syringe_bracket.png>
+Package pdftex.def Info: assets/third_it/ME_syringe_bracket.png  used on input line 302.
+(pdftex.def)             Requested size: 169.11209pt x 163.26779pt.
+<assets/third_it/ME_plunger_bracket.png, id=402, 1561.835pt x 1560.83125pt>
+File: assets/third_it/ME_plunger_bracket.png Graphic file (type png)
+<use assets/third_it/ME_plunger_bracket.png>
+Package pdftex.def Info: assets/third_it/ME_plunger_bracket.png  used on input line 303.
+(pdftex.def)             Requested size: 164.41711pt x 164.3089pt.
+<assets/third_it/ME_dispenser_mechanism_assembly.png, id=403, 621.82312pt x 444.91219pt>
+File: assets/third_it/ME_dispenser_mechanism_assembly.png Graphic file (type png)
+<use assets/third_it/ME_dispenser_mechanism_assembly.png>
+Package pdftex.def Info: assets/third_it/ME_dispenser_mechanism_assembly.png  used on input line 309.
+(pdftex.def)             Requested size: 375.80544pt x 268.89096pt.
+ [13 <./assets/third_it/ME_case_l_bracket.png> <./assets/third_it/ME_l_bracket.png> <./assets/third_it/ME_syringe_bracket.png> <./assets/third_it/ME_plunger_bracket.png>] [14 <./assets/third_it/ME_dispenser_mechanism_assembly.png>]
+Chapter 4.
+<assets/first_it/CS_userflow.png, id=417, 575.14874pt x 399.4925pt>
+File: assets/first_it/CS_userflow.png Graphic file (type png)
+<use assets/first_it/CS_userflow.png>
+Package pdftex.def Info: assets/first_it/CS_userflow.png  used on input line 330.
+(pdftex.def)             Requested size: 375.80544pt x 261.03859pt.
+<assets/first_it/CS_userflowfinal.png, id=418, 1827.82875pt x 991.705pt>
+File: assets/first_it/CS_userflowfinal.png Graphic file (type png)
+<use assets/first_it/CS_userflowfinal.png>
+Package pdftex.def Info: assets/first_it/CS_userflowfinal.png  used on input line 337.
+(pdftex.def)             Requested size: 375.80544pt x 203.89099pt.
+[15
+
+ <./assets/first_it/CS_userflow.png>]
+<assets/first_it/CS_ui-landing.png, id=425, 406.51875pt x 539.01375pt>
+File: assets/first_it/CS_ui-landing.png Graphic file (type png)
+<use assets/first_it/CS_ui-landing.png>
+Package pdftex.def Info: assets/first_it/CS_ui-landing.png  used on input line 354.
+(pdftex.def)             Requested size: 187.89914pt x 249.13368pt.
+<assets/first_it/CS_ui-load.png, id=426, 475.7775pt x 316.18124pt>
+File: assets/first_it/CS_ui-load.png Graphic file (type png)
+<use assets/first_it/CS_ui-load.png>
+Package pdftex.def Info: assets/first_it/CS_ui-load.png  used on input line 359.
+(pdftex.def)             Requested size: 187.89914pt x 124.8685pt.
+<assets/first_it/CS_ui-color.png, id=427, 467.7475pt x 316.18124pt>
+File: assets/first_it/CS_ui-color.png Graphic file (type png)
+<use assets/first_it/CS_ui-color.png>
+Package pdftex.def Info: assets/first_it/CS_ui-color.png  used on input line 360.
+(pdftex.def)             Requested size: 187.89914pt x 127.01543pt.
+ [16 <./assets/first_it/CS_userflowfinal.png>]
+<assets/first_it/CS_pseudocode1.png, id=433, 824.07875pt x 652.4375pt>
+File: assets/first_it/CS_pseudocode1.png Graphic file (type png)
+<use assets/first_it/CS_pseudocode1.png>
+Package pdftex.def Info: assets/first_it/CS_pseudocode1.png  used on input line 368.
+(pdftex.def)             Requested size: 375.80544pt x 297.53648pt.
+<assets/first_it/CS_pseudocode2.png, id=434, 1194.4625pt x 472.76625pt>
+File: assets/first_it/CS_pseudocode2.png Graphic file (type png)
+<use assets/first_it/CS_pseudocode2.png>
+Package pdftex.def Info: assets/first_it/CS_pseudocode2.png  used on input line 369.
+(pdftex.def)             Requested size: 375.80544pt x 148.7418pt.
+<assets/first_it/CS_pseudocode3.png, id=435, 816.04875pt x 399.4925pt>
+File: assets/first_it/CS_pseudocode3.png Graphic file (type png)
+<use assets/first_it/CS_pseudocode3.png>
+Package pdftex.def Info: assets/first_it/CS_pseudocode3.png  used on input line 374.
+(pdftex.def)             Requested size: 375.80544pt x 183.97603pt.
+ [17 <./assets/first_it/CS_ui-landing.png> <./assets/first_it/CS_ui-load.png> <./assets/first_it/CS_ui-color.png>] [18 <./assets/first_it/CS_pseudocode1.png> <./assets/first_it/CS_pseudocode2.png>] [19 <./assets/first_it/CS_pseudocode3.png>]
+Chapter 5.
+<assets/first_it/EE_wiring.png, id=454, 736.7525pt x 739.76375pt>
+File: assets/first_it/EE_wiring.png Graphic file (type png)
+<use assets/first_it/EE_wiring.png>
+Package pdftex.def Info: assets/first_it/EE_wiring.png  used on input line 390.
+(pdftex.def)             Requested size: 375.80544pt x 377.33095pt.
+[20
+
+]
+Overfull \vbox (11.62955pt too high) has occurred while \output is active []
+
+ [21 <./assets/first_it/EE_wiring.png>]
+<assets/third_it/EE_second_wiringdiagrams.png, id=465, 1440.38126pt x 849.1725pt>
+File: assets/third_it/EE_second_wiringdiagrams.png Graphic file (type png)
+<use assets/third_it/EE_second_wiringdiagrams.png>
+Package pdftex.def Info: assets/third_it/EE_second_wiringdiagrams.png  used on input line 424.
+(pdftex.def)             Requested size: 375.80544pt x 221.54411pt.
+ [22 <./assets/third_it/EE_second_wiringdiagrams.png>] [23]
+Chapter 6.
+[24
+
+]
+Chapter 7.
+[25
+
+]
+Chapter 8.
+
+Overfull \hbox (42.619pt too wide) in paragraph at lines 457--481
+ [][] 
+ []
+
+[26
+
+] (./engineer_report.bbl [27
+
+]) [28
+
+] (./engineer_report.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+Package rerunfilecheck Info: File `engineer_report.out' has not changed.
+(rerunfilecheck)             Checksum: 42264FF9B0235B9844B6B57EF18E69FB;6878.
+ ) 
+Here is how much of TeX's memory you used:
+ 15167 strings out of 474116
+ 244240 string characters out of 5734122
+ 1943187 words of memory out of 5000000
+ 37219 multiletter control sequences out of 15000+600000
+ 575945 words of font info for 79 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,11n,79p,403b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on engineer_report.pdf (32 pages, 5889765 bytes).
+PDF statistics:
+ 591 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 529 words of extra memory for PDF output out of 10000 (max. 10000000)
+
