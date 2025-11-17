@@ -1,14 +1,14 @@
 import lgpio
 import time
 
-IN1 = 6
-IN2 = 13
-IN3 = 19
-IN4 = 26
+IN1 = 24
+IN2 = 25
+IN3 = 8
+IN4 = 7
 
-pins = [IN1, IN2, IN3, IN4]
+pins = [IN1, IN2, IN3, IN4] 
 
-STEPS_NEEDED = 2000
+STEPS_NEEDED = 1000
 DELAY = 0.001
 
 halfstep_seq = [
