@@ -62,4 +62,4 @@ def dispense():
 
 if __name__ == "__main__":
     # IMPORTANT: this URL/port must match Device.tsx BACKEND_URL
-    app.run(host="172.20.10.2", port=8080, debug=True)
+    app.run(host="172.20.10.2", port=8081, debug=True)
