@@ -145,9 +145,6 @@ INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/cite/cite.
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/cite/cite.sty
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./engineer_report.aux
-INPUT ./engineer_report.aux
-INPUT engineer_report.aux
 OUTPUT engineer_report.aux
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
