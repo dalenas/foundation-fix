@@ -427,8 +427,8 @@
     The pseudocode shows our preliminary ideas for how the software would be 
     structured. It shows all the steps needed to turn Gamma Corrected RGB, 
     which is what the camera picks up, into values that represent the colors
-    in the physical, non-digital world [2]. The algorithm is primarily based 
-    linear algebra transformations and matrix operations [3]. 
+    in the physical, non-digital world \cite[2]{LindbloomRGBXYZ}. The algorithm is primarily based 
+    linear algebra transformations and matrix operations \cite[3]{LindbloomXYZLab}. 
     
 
     \subsection{Techstack}
@@ -486,13 +486,13 @@
     Skin samples are flattened into a matrix and normalized. '\texttt{gamma\_to\_linear()}'
     converts gamma corrected RGB values to linear RGB. '\texttt{lighting\_correction()}' corrects the for
     inconsistent lighting and the corrected RGB is converted to XYZ in '\texttt{linear\_to\_xyz()}' then
-    to LAB in '\texttt{xyz\_to\_lab()}' [4].
+    to LAB in '\texttt{xyz\_to\_lab()}' \cite[4]{MacAdamEllipsoids}.
     
     \textbf{Output color encoding : }
 
     The average LAB color is mapped to an approximate RGB value in '\texttt{lab\_avg\_to\_rgb()}' and 
     formatted as a hexadecimal color string. This hexadecimal string is returned as
-    '\{"result":"<hex\_color>"\}' to the front end, which uses it for visualization for the user[5]. 
+    '\{"result":"<hex\_color>"\}' to the front end, which uses it for visualization for the user \cite[5]{OLearyUMD}. 
     \bigbreak
 
     \subsubsection{Dispensing Logic \(`/dispense`\)}

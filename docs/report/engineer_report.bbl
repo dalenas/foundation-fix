@@ -3,6 +3,30 @@
 \bibitem{SmithS}
 Sophie Smith.
 \newblock Billions of beauty packaging goes unrecycled every year -- theindustry.beauty.
-\newblock 2024.
+\newblock {\em TheIndustry.beauty}, 2024.
+
+\bibitem{LindbloomRGBXYZ}
+Bruce Lindbloom.
+\newblock Rgb to xyz color space conversion.
+\newblock \url{http://www.brucelindbloom.com/index.html?Eqn_RGB_to_XYZ.html}, n.d.
+\newblock Accessed 2025.
+
+\bibitem{LindbloomXYZLab}
+Bruce Lindbloom.
+\newblock Xyz to lab color space conversion.
+\newblock \url{http://www.brucelindbloom.com/index.html?Eqn_XYZ_to_Lab.html}, n.d.
+\newblock Accessed 2025.
+
+\bibitem{MacAdamEllipsoids}
+M.~R. Luo, G.~Cui, and B.~Rigg.
+\newblock The development of the cie 2000 colour-difference formula: Ciede2000.
+\newblock {\em arXiv}, 2013.
+\newblock Accessed 2025.
+
+\bibitem{OLearyUMD}
+Dianne~P. O'Leary.
+\newblock Yet another {\$} (ya{\$}) algorithm for computing the singular value decomposition.
+\newblock {\em University of Maryland Department of Computer Science Technical Report}, 1990.
+\newblock Accessed 2025.
 
 \end{thebibliography}

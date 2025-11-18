@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  17 NOV 2025 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  17 NOV 2025 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -771,17 +771,17 @@ Package pdftex.def Info: assets/first_it/CS_pseudocode3.png  used on input line 
 [22
 
  <./assets/first_it/CS_userflow.png>] [23 <./assets/first_it/CS_pseudocode1.png> <./assets/first_it/CS_pseudocode2.png>]
-<assets/first_it/CS_ui-landing.png, id=484, 406.51875pt x 539.01375pt>
+<assets/first_it/CS_ui-landing.png, id=486, 406.51875pt x 539.01375pt>
 File: assets/first_it/CS_ui-landing.png Graphic file (type png)
 <use assets/first_it/CS_ui-landing.png>
 Package pdftex.def Info: assets/first_it/CS_ui-landing.png  used on input line 451.
 (pdftex.def)             Requested size: 187.89914pt x 249.13368pt.
-<assets/first_it/CS_ui-load.png, id=485, 475.7775pt x 316.18124pt>
+<assets/first_it/CS_ui-load.png, id=487, 475.7775pt x 316.18124pt>
 File: assets/first_it/CS_ui-load.png Graphic file (type png)
 <use assets/first_it/CS_ui-load.png>
 Package pdftex.def Info: assets/first_it/CS_ui-load.png  used on input line 456.
 (pdftex.def)             Requested size: 187.89914pt x 124.8685pt.
-<assets/first_it/CS_ui-color.png, id=486, 467.7475pt x 316.18124pt>
+<assets/first_it/CS_ui-color.png, id=488, 467.7475pt x 316.18124pt>
 File: assets/first_it/CS_ui-color.png Graphic file (type png)
 <use assets/first_it/CS_ui-color.png>
 Package pdftex.def Info: assets/first_it/CS_ui-color.png  used on input line 457.
@@ -791,13 +791,113 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 48
  (/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<assets/final/macbeth.png, id=500, 602.25pt x 447.6725pt>
+<assets/final/macbeth.png, id=506, 602.25pt x 447.6725pt>
 File: assets/final/macbeth.png Graphic file (type png)
 <use assets/final/macbeth.png>
 Package pdftex.def Info: assets/final/macbeth.png  used on input line 522.
 (pdftex.def)             Requested size: 234.8775pt x 174.59157pt.
  [26{/usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [27 <./assets/final/macbeth.png>] [28]
 Chapter 5.
-<assets/first_it/EE_wiring.png, id=521, 736.7525pt x 739.76375pt>
+<assets/first_it/EE_wiring.png, id=529, 736.7525pt x 739.76375pt>
 File: assets/first_it/EE_wiring.png Graphic file (type png)
-<use assets/first_it/EE_wiring
+<use assets/first_it/EE_wiring.png>
+Package pdftex.def Info: assets/first_it/EE_wiring.png  used on input line 591.
+(pdftex.def)             Requested size: 375.80544pt x 377.33095pt.
+[29
+
+]
+Overfull \vbox (11.62955pt too high) has occurred while \output is active []
+
+ [30 <./assets/first_it/EE_wiring.png>]
+<assets/final/perf.png, id=539, 701.62125pt x 938.50626pt>
+File: assets/final/perf.png Graphic file (type png)
+<use assets/final/perf.png>
+Package pdftex.def Info: assets/final/perf.png  used on input line 623.
+(pdftex.def)             Requested size: 164.41711pt x 219.9189pt.
+<assets/final/servomotor_driver.png, id=540, 795.97375pt x 934.49126pt>
+File: assets/final/servomotor_driver.png Graphic file (type png)
+<use assets/final/servomotor_driver.png>
+Package pdftex.def Info: assets/final/servomotor_driver.png  used on input line 624.
+(pdftex.def)             Requested size: 187.89914pt x 220.58936pt.
+ [31 <./assets/final/perf.png> <./assets/final/servomotor_driver.png>]
+<assets/third_it/EE_second_wiringdiagrams.png, id=550, 1440.38126pt x 849.1725pt>
+File: assets/third_it/EE_second_wiringdiagrams.png Graphic file (type png)
+<use assets/third_it/EE_second_wiringdiagrams.png>
+Package pdftex.def Info: assets/third_it/EE_second_wiringdiagrams.png  used on input line 639.
+(pdftex.def)             Requested size: 375.80544pt x 221.54411pt.
+<assets/final/lidcircuitry.png, id=551, 697.60625pt x 939.51pt>
+File: assets/final/lidcircuitry.png Graphic file (type png)
+<use assets/final/lidcircuitry.png>
+Package pdftex.def Info: assets/final/lidcircuitry.png  used on input line 660.
+(pdftex.def)             Requested size: 281.85587pt x 379.59631pt.
+ [32 <./assets/third_it/EE_second_wiringdiagrams.png>] [33 <./assets/final/lidcircuitry.png>]
+Chapter 6.
+<assets/final/dispenser.png, id=563, 701.62125pt x 934.49126pt>
+File: assets/final/dispenser.png Graphic file (type png)
+<use assets/final/dispenser.png>
+Package pdftex.def Info: assets/final/dispenser.png  used on input line 675.
+(pdftex.def)             Requested size: 375.80544pt x 500.55391pt.
+<assets/final/skeleton.png, id=564, 700.6175pt x 939.51pt>
+File: assets/final/skeleton.png Graphic file (type png)
+<use assets/final/skeleton.png>
+Package pdftex.def Info: assets/final/skeleton.png  used on input line 680.
+(pdftex.def)             Requested size: 375.80544pt x 503.95894pt.
+[34
+
+]
+Overfull \vbox (67.62389pt too high) has occurred while \output is active []
+
+ [35 <./assets/final/dispenser.png>] [36 <./assets/final/skeleton.png>]
+Chapter 7.
+[37
+
+]
+Chapter 8.
+
+Underfull \hbox (badness 6559) in paragraph at lines 731--731
+[]\T1/cmr/m/n/12 2PCS 300mm Tr8x8 Lead
+ []
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 735--735
+[]\T1/cmr/m/n/12 Linear Mo-tion Rod Guide
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 737--737
+[]\T1/cmr/m/n/12 8mm Flange Pil-low Block
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 745--745
+[]\T1/cmr/m/n/12 Assorted Met-ric Fas-ten-ers
+ []
+
+[38
+
+] (./engineer_report.bbl [39]) [40
+
+] (./engineer_report.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+Package rerunfilecheck Info: File `engineer_report.out' has not changed.
+(rerunfilecheck)             Checksum: 7303EBFAAAA20C2F3211DB09BE03A9DA;6659.
+ ) 
+Here is how much of TeX's memory you used:
+ 15319 strings out of 474116
+ 249149 string characters out of 5734122
+ 1944187 words of memory out of 5000000
+ 37337 multiletter control sequences out of 15000+600000
+ 576936 words of font info for 82 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,11n,79p,403b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on engineer_report.pdf (44 pages, 32204449 bytes).
+PDF statistics:
+ 713 PDF objects out of 1000 (max. 8388607)
+ 544 compressed objects within 6 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 570 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,53 @@
+\contentsline {chapter}{\numberline {1}Abstract}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Introduction}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Research}{2}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Background of Problem}{2}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Existing Solutions}{2}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Design Choices}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Past Considerations and Scrapped Plans}{3}{subsection.2.2.1}%
+\contentsline {chapter}{\numberline {3}Hardware Design and Specifications}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}First Iteration}{4}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Initial CAD Model and Hand Sketches}{4}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Second Iteration}{7}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Updated CAD Models}{7}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Updated CAD Models}{9}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Third Iteration}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Final CAD Models}{11}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Final Manufacturing Drawings for Custom Parts}{16}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Software Design}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}First Iteration}{22}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Preliminary Diagrams and Psuedocode}{22}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Techstack}{24}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Second Iteration}{25}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Lo-fi/Mid-fi Designs}{25}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Basic Logic and Functionality}{25}{subsection.4.2.2}%
+\contentsline {subsubsection}{Skin Tone Analysis Pipeline \('/analyze'\)}{26}{subsection.4.2.2}%
+\contentsline {subsubsection}{Dispensing Logic \(`/dispense`\)}{26}{subsection.4.2.2}%
+\contentsline {subsubsection}{HealthHealth Check \(`/ping`\)}{26}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Core Features of Algorithm}{26}{subsection.4.2.3}%
+\contentsline {subsubsection}{Macbeth Color Chart Reference Calibration}{27}{subsection.4.2.3}%
+\contentsline {subsubsection}{Robust Skin Sampling from Facial Regions}{27}{figure.caption.31}%
+\contentsline {subsubsection}{Gamma Correction and Linear RGB Conversion}{27}{figure.caption.31}%
+\contentsline {subsubsection}{Lighting Correction Using Chart Reference Data}{27}{figure.caption.31}%
+\contentsline {subsubsection}{Transformation into Lab Color Space}{28}{figure.caption.31}%
+\contentsline {subsubsection}{Cosmetic Shade Selection and Hex Output}{28}{figure.caption.31}%
+\contentsline {subsubsection}{Integration with Hardware Dispensing Logic}{28}{figure.caption.31}%
+\contentsline {section}{\numberline {4.3}Third Iteration}{28}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Final Product}{28}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {5}Electrical Systems Design}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}First Iteration}{30}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Initial Wiring Diagrams}{30}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Initial Power Calculations}{31}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Second Iteration}{31}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Circuit Building}{31}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Third Iteration}{32}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Final Wiring Diagrams}{32}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Final Power Calculations}{32}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Circuitry}{33}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Final Product}{34}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Integration}{36}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Discussion}{37}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Limitations and Future Work}{37}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Conclusion}{38}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Bill of Materials}{39}{section.8.1}%
+\contentsline {chapter}{References}{39}{table.caption.39}%
