@@ -225,6 +225,7 @@ INPUT ./engineer_report.lot
 INPUT ./engineer_report.lot
 INPUT engineer_report.lot
 OUTPUT engineer_report.lot
+INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
 INPUT /usr/local/Cellar/texlive/20240312_3/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
