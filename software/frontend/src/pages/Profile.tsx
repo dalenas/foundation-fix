@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,13 +11,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Camera, User, Save } from "lucide-react";
-import Header from "@/components/Header";
+import { Camera, User, Save, Palette, Cpu, Image } from "lucide-react";
 import { toast } from "sonner";
 
-const LOCAL_STORAGE_KEY = "foundation-fix-profile"; // current active profile (for Library)
-const PROFILES_KEY = "foundation-fix-profiles"; // all profiles map
-const FORMULA_STORAGE_PREFIX = "foundation-fix-formulas-"; // per-profile formulas
+const LOCAL_STORAGE_KEY = "foundation-fix-profile";
+const PROFILES_KEY = "foundation-fix-profiles";
+const FORMULA_STORAGE_PREFIX = "foundation-fix-formulas-";
 
 type ProfileData = {
   name: string;
@@ -27,6 +27,8 @@ type ProfileData = {
 };
 
 const Profile = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,13 +42,14 @@ const Profile = () => {
   const [profiles, setProfiles] = useState<Record<string, ProfileData>>({});
   const [activeEmailKey, setActiveEmailKey] = useState<string>("");
 
+  const isActive = (path: string) => location.pathname === path;
+
   // Load all profiles + current active profile on mount
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     let storedProfiles: Record<string, ProfileData> = {};
 
-    // Load saved profiles map
     const profilesJson = window.localStorage.getItem(PROFILES_KEY);
     if (profilesJson) {
       try {
@@ -56,7 +59,6 @@ const Profile = () => {
       }
     }
 
-    // Load current profile (backwards compatible with old single-profile version)
     const currentJson = window.localStorage.getItem(LOCAL_STORAGE_KEY);
     let activeKey = "";
 
@@ -81,7 +83,6 @@ const Profile = () => {
       }
     }
 
-    // If no explicit active profile but we have profiles, pick the first one
     const keys = Object.keys(storedProfiles);
     if (!activeKey && keys.length > 0) {
       activeKey = keys[0];
@@ -136,14 +137,10 @@ const Profile = () => {
       imageDataUrl,
     };
 
-    // Update profiles map
     const updatedProfiles = { ...profiles };
 
-    // If we renamed the email, drop the old key
     if (activeEmailKey && activeEmailKey !== emailKey) {
       delete updatedProfiles[activeEmailKey];
-      // also delete old formulas if we changed email? up to you.
-      // window.localStorage.removeItem(FORMULA_STORAGE_PREFIX + activeEmailKey);
     }
 
     updatedProfiles[emailKey] = profile;
@@ -156,7 +153,6 @@ const Profile = () => {
         PROFILES_KEY,
         JSON.stringify(updatedProfiles)
       );
-      // Keep this as the "current profile" so Library can pick up the correct email
       window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(profile));
     }
 
@@ -218,7 +214,6 @@ const Profile = () => {
         PROFILES_KEY,
         JSON.stringify(updatedProfiles)
       );
-      // delete formulas for this profile
       window.localStorage.removeItem(FORMULA_STORAGE_PREFIX + deletedKey);
     }
 
@@ -240,7 +235,6 @@ const Profile = () => {
         window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(p));
       }
     } else {
-      // no profiles left
       setActiveEmailKey("");
       setFormData({
         name: "",
@@ -260,9 +254,46 @@ const Profile = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {/* Navigation */}
+      <nav className="flex items-center justify-between p-6 bg-background border-b border-border">
+        <div 
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+            <Palette className="w-6 h-6 text-white" />
+          </div>
+          <span className="text-xl font-semibold text-primary">Foundation Fix</span>
+        </div>
+        <div className="flex items-center gap-6">
+          <Button 
+            variant={isActive("/device") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/device")}
+          >
+            <Cpu className="w-4 h-4" />
+            Raspberry Pi
+          </Button>
+          <Button 
+            variant={isActive("/library") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/library")}
+          >
+            <Image className="w-4 h-4" />
+            Library
+          </Button>
+          <Button 
+            variant={isActive("/profile") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/profile")}
+          >
+            <User className="w-4 h-4" />
+            Profile
+          </Button>
+        </div>
+      </nav>
 
-      <main className="pt-24 pb-12">
+      <main className="py-20 px-4">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="mb-8">
             <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
@@ -334,7 +365,6 @@ const Profile = () => {
                   )}
                 </div>
 
-                {/* Hidden file input */}
                 <input
                   ref={fileInputRef}
                   type="file"
