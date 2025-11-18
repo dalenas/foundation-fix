@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Cpu, Image, Palette, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,6 +6,9 @@ import AboutSection from "@/components/AboutSection";
 
 const Home = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <div className="min-h-screen">
@@ -22,7 +25,7 @@ const Home = () => {
         </div>
         <div className="flex items-center gap-6">
           <Button 
-            variant="ghost" 
+            variant={isActive("/device") ? "default" : "ghost"}
             className="gap-2"
             onClick={() => navigate("/device")}
           >
@@ -30,7 +33,7 @@ const Home = () => {
             Raspberry Pi
           </Button>
           <Button 
-            variant="ghost" 
+            variant={isActive("/library") ? "default" : "ghost"}
             className="gap-2"
             onClick={() => navigate("/library")}
           >
@@ -38,7 +41,7 @@ const Home = () => {
             Library
           </Button>
           <Button 
-            variant="ghost"
+            variant={isActive("/profile") ? "default" : "ghost"}
             className="gap-2"
             onClick={() => navigate("/profile")}
           >

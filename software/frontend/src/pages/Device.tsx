@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,18 +10,21 @@ import {
 } from "@/components/ui/card";
 import {
   Cpu,
-  Image as ImageIcon,
+  Image,
   CheckCircle2,
   AlertCircle,
   Camera,
   Trash2,
+  Palette,
+  User,
 } from "lucide-react";
-import Header from "@/components/Header";
 import { toast } from "sonner";
 
 const BACKEND_URL = "http://127.0.0.1:5000";
 
 const Device = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isConnected, setIsConnected] = useState(false);
   const [backendOnline, setBackendOnline] = useState(false);
 
@@ -35,6 +39,8 @@ const Device = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [cameraStream, setCameraStream] = useState<MediaStream | null>(null);
   const [cameraActive, setCameraActive] = useState(false);
+
+  const isActive = (path: string) => location.pathname === path;
 
   // ---------------- BACKEND HEALTH CHECK ----------------
   const checkBackendConnection = async () => {
@@ -121,7 +127,6 @@ const Device = () => {
     toast.message("Camera stopped.");
   };
 
-  // Cleanup on unmount
   useEffect(() => {
     return () => {
       cameraStream?.getTracks().forEach((t) => t.stop());
@@ -153,7 +158,6 @@ const Device = () => {
       return;
     }
 
-    // Mirror horizontally so the captured image matches the mirrored preview
     ctx.save();
     ctx.translate(w, 0);
     ctx.scale(-1, 1);
@@ -169,7 +173,7 @@ const Device = () => {
         const file = new File([blob], "capture.jpg", { type: "image/jpeg" });
         setSelectedFile(file);
         setSelectedImagePreview(URL.createObjectURL(blob));
-        setAnalysisResult(null); // clear old result on new capture
+        setAnalysisResult(null);
         toast.success("Captured frame from camera.");
       },
       "image/jpeg",
@@ -177,7 +181,6 @@ const Device = () => {
     );
   };
 
-  // ---------------- FILE UPLOAD ----------------
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -187,7 +190,7 @@ const Device = () => {
     const reader = new FileReader();
     reader.onload = () => setSelectedImagePreview(reader.result as string);
     reader.readAsDataURL(file);
-    setAnalysisResult(null); // clear old result
+    setAnalysisResult(null);
   };
 
   const clearImage = () => {
@@ -197,7 +200,6 @@ const Device = () => {
     toast.message("Image cleared. Capture or upload a new one.");
   };
 
-  // ---------------- ANALYZE ----------------
   const handleAnalyze = async () => {
     if (!selectedFile) {
       toast.error("Upload an image or capture from camera first.");
@@ -214,7 +216,7 @@ const Device = () => {
 
     try {
       const formData = new FormData();
-      formData.append("image", selectedFile); // field name matches main.py
+      formData.append("image", selectedFile);
 
       const response = await fetch(`${BACKEND_URL}/analyze`, {
         method: "POST",
@@ -226,7 +228,7 @@ const Device = () => {
       if (data.error) {
         toast.error(data.error);
       } else {
-        setAnalysisResult(data.result); // hex / shade from your algo
+        setAnalysisResult(data.result);
         toast.success("Analysis complete!");
       }
     } catch (err) {
@@ -239,7 +241,6 @@ const Device = () => {
     }
   };
 
-  // ---------------- DISPENSE ----------------
   const handleDispense = async () => {
     if (!analysisResult) return;
 
@@ -268,19 +269,56 @@ const Device = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-24 pb-12">
+      {/* Navigation */}
+      <nav className="flex items-center justify-between p-6 bg-background border-b border-border">
+        <div 
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+            <Palette className="w-6 h-6 text-white" />
+          </div>
+          <span className="text-xl font-semibold text-primary">Foundation Fix</span>
+        </div>
+        <div className="flex items-center gap-6">
+          <Button 
+            variant={isActive("/device") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/device")}
+          >
+            <Cpu className="w-4 h-4" />
+            Raspberry Pi
+          </Button>
+          <Button 
+            variant={isActive("/library") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/library")}
+          >
+            <Image className="w-4 h-4" />
+            Library
+          </Button>
+          <Button 
+            variant={isActive("/profile") ? "default" : "ghost"}
+            className="gap-2"
+            onClick={() => navigate("/profile")}
+          >
+            <User className="w-4 h-4" />
+            Profile
+          </Button>
+        </div>
+      </nav>
+
+      <main className="py-20 px-4">
         <div className="container mx-auto px-6 max-w-4xl">
           <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             Foundation Fix Device
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-6">
             {backendOnline
               ? "Local backend (main.py) is connected and ready."
               : "Backend is offline. Start main.py on 127.0.0.1:5000 to analyze."}
           </p>
 
-          {/* Connection card */}
           <Card className="mb-6 border-border shadow-[var(--shadow-soft)]">
             <CardHeader>
               <div className="flex items-center justify-between">
@@ -314,11 +352,10 @@ const Device = () => {
             </CardHeader>
           </Card>
 
-          {/* Camera + Upload + Analyze */}
           <Card className="mb-8 border-border shadow-[var(--shadow-soft)]">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <ImageIcon className="w-5 h-5 text-primary" /> Capture or Upload
+                <Image className="w-5 h-5 text-primary" /> Capture or Upload
                 Image
               </CardTitle>
               <CardDescription>
@@ -326,7 +363,6 @@ const Device = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {/* Camera controls */}
               <div className="space-y-2">
                 <div className="flex flex-wrap items-center gap-2">
                   <Button
@@ -351,19 +387,17 @@ const Device = () => {
                 <p className="text-xs text-muted-foreground">
                   Camera active: {cameraActive ? "yes" : "no"}
                 </p>
-                {/* Bigger, mirrored video box */}
                 <video
                   ref={videoRef}
                   autoPlay
                   playsInline
                   muted
                   className="mt-3 w-full max-w-xl aspect-video bg-black rounded-lg border border-border shadow-sm object-cover"
-                  style={{ transform: "scaleX(-1)" }} // mirror effect in preview
+                  style={{ transform: "scaleX(-1)" }}
                 />
               </div>
 
               <div className="border-t border-border pt-4 space-y-4">
-                {/* File upload + preview + clear */}
                 <div className="flex flex-col gap-2 max-w-xl">
                   <input
                     type="file"
