@@ -6,41 +6,65 @@
 \contentsline {section}{\numberline {2.2}Design Choices}{3}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Past Considerations and Scrapped Plans}{3}{subsection.2.2.1}%
 \contentsline {chapter}{\numberline {3}Hardware Design and Specifications}{4}{chapter.3}%
-\contentsline {section}{\numberline {3.1}First Iteration}{5}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Initial CAD Model and Hand Sketches}{5}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Second Iteration}{8}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Updated CAD Models}{8}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Third Iteration}{10}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Final CAD Models}{10}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Final Manufacturing Drawings for Custom Parts}{14}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Software Design}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}First Iteration}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Preliminary Diagrams}{15}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}User Flow Diagram}{16}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Techstack}{16}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Second Iteration}{17}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Lo-fi/Mid-fi Designs}{17}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Basic Logic and Functionality}{18}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Core Features of Algorithm}{19}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Third Iteration}{19}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Final Product}{19}{subsection.4.3.1}%
-\contentsline {chapter}{\numberline {5}Electrical Systems Design}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}First Iteration}{21}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Initial Wiring Diagrams}{21}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Initial Power Calculations}{22}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Second Iteration}{22}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Circuit Building}{22}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Third Iteration}{22}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Final Wiring Diagrams}{22}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Final Power Calculations}{23}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Circuitry}{23}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Final Product}{24}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Testing Protocol}{24}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Integration}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}System Performance}{24}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Discussion}{25}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Limitations}{25}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Future Work}{25}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusion}{26}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Bill of Materials}{26}{section.8.1}%
-\contentsline {chapter}{References}{27}{chapter*.25}%
+\contentsline {section}{\numberline {3.1}First Iteration}{4}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Initial CAD Model and Hand Sketches}{4}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Second Iteration}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Updated CAD Models}{9}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Updated CAD Models}{11}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Third Iteration}{13}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Final CAD Model}{13}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Final Manufacturing Drawings for Custom Parts}{13}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Commentary}{13}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Final CAD Models}{13}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Final Manufacturing Drawings for Custom Parts}{17}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Final CAD Model}{17}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Final Manufacturing Drawings for Custom Parts}{17}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Commentary}{17}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}Final CAD Models}{17}{subsection.3.3.9}%
+\contentsline {subsection}{\numberline {3.3.10}Final Manufacturing Drawings for Custom Parts}{23}{subsection.3.3.10}%
+\contentsline {chapter}{\numberline {4}Software Design}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}First Iteration}{30}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Preliminary Diagrams and Psuedocode}{30}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}User Flow Diagram}{34}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Techstack}{34}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Second Iteration}{34}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Lo-fi/Mid-fi Designs}{34}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Basic Logic and Functionality}{34}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}User Flow Diagram}{36}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Techstack}{37}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Second Iteration}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Lo-fi/Mid-fi Designs}{37}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Basic Logic and Functionality}{38}{subsection.4.3.2}%
+\contentsline {subsubsection}{Skin Tone Analysis Pipeline \('/analyze'\)}{38}{subsection.4.3.2}%
+\contentsline {subsubsection}{Dispensing Logic \(`/dispense`\)}{38}{subsection.4.3.2}%
+\contentsline {subsubsection}{HealthHealth Check \(`/ping`\)}{38}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Core Features of Algorithm}{39}{subsection.4.3.3}%
+\contentsline {subsubsection}{Macbeth Color Chart Reference Calibration}{39}{subsection.4.3.3}%
+\contentsline {subsubsection}{Robust Skin Sampling from Facial Regions}{39}{figure.caption.42}%
+\contentsline {subsubsection}{Gamma Correction and Linear RGB Conversion}{39}{figure.caption.42}%
+\contentsline {subsubsection}{Lighting Correction Using Chart Reference Data}{40}{figure.caption.42}%
+\contentsline {subsubsection}{Transformation into Lab Color Space}{40}{figure.caption.42}%
+\contentsline {subsubsection}{Cosmetic Shade Selection and Hex Output}{40}{figure.caption.42}%
+\contentsline {subsubsection}{Integration with Hardware Dispensing Logic}{40}{figure.caption.42}%
+\contentsline {section}{\numberline {4.4}Third Iteration}{40}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Final Product}{40}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}Electrical Systems Design}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}First Iteration}{42}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Initial Wiring Diagrams}{42}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Initial Power Calculations}{43}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Second Iteration}{43}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Circuit Building}{43}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Third Iteration}{44}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Final Wiring Diagrams}{44}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Final Power Calculations}{44}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Circuitry}{45}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Final Product}{46}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Testing Protocol}{48}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Integration}{48}{section.6.2}%
+\contentsline {section}{\numberline {6.3}System Performance}{48}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Discussion}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Limitations}{49}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Future Work}{49}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusion}{50}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Bill of Materials}{50}{section.8.1}%
+\contentsline {chapter}{References}{51}{chapter*.51}%
