@@ -1,5 +1,10 @@
 venv/
-docs/report/engineer_report.fdb_latexmk
-docs/report/engineer_report.fls
-docs/report/engineer_report.log
-docs/report/engineer_report.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.synctex.gz(busy)
+*.fls*.fdb_latexmk
+*.bbl
+*.blg
