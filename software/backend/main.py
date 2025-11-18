@@ -35,25 +35,13 @@ final_lab = rtl.average_lab(skin_lab)
 print("\nFinal averaged Lab code from live capture:", final_lab)
 
 app = Flask(__name__)
-CORS(app)  # allow your React dev server to call this
+CORS(app)
+
 
 @app.route("/ping", methods=["GET"])
 def ping():
     """Health check for Device.tsx."""
     return jsonify({"status": "ok"}), 200
-
-
-def run_algorithm(image: Image.Image) -> str:
-    """
-    CONNECT THIS TO YOUR REAL ALGO.
-    Replace the body with whatever you already use to scan the face
-    and decide the correct foundation.
-
-    Example:
-        return get_foundation_color(image)
-    """
-    # placeholder so the connection works:
-    return "#C68A65"
 
 
 @app.route("/analyze", methods=["POST"])
@@ -63,13 +51,22 @@ def analyze():
         return jsonify({"error": "No image file provided."}), 400
 
     file = request.files["image"]
-    try:
-        img_bytes = file.read()
-        image = Image.open(io.BytesIO(img_bytes)).convert("RGB")
 
-        hex_color = run_algorithm(image)
+    try:
+        # Save incoming image temporarily because image_to_hex expects a path
+        img_bytes = file.read()
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp:
+            tmp.write(img_bytes)
+            temp_path = tmp.name
+
+        # Run your new algorithm
+        hex_color = image_to_hex(temp_path)
+
+        # Cleanup temp file
+        os.remove(temp_path)
 
         return jsonify({"result": hex_color}), 200
+
     except Exception as e:
         print("Analyze error:", e)
         return jsonify({"error": "Failed to analyze image."}), 500
@@ -80,14 +77,15 @@ def dispense():
     """Optional: Device's 'Dispense Foundation' button hits this."""
     data = request.get_json(silent=True) or {}
     color = data.get("color")
+
     if not color:
         return jsonify({"error": "No color provided."}), 400
 
-    # TODO: hook this to your pumps / Pi hardware
+    # TODO: connect to pumps / Raspberry Pi hardware
     print(f"[DISPENSE] Dispensing for color: {color}")
     return jsonify({"status": "ok"}), 200
 
 
 if __name__ == "__main__":
-    # IMPORTANT: this URL/port must match Device.tsx BACKEND_URL
-    app.run(host="172.20.10.2", port=8080, debug=True)
+    app.run(host="127.0.0.1", port=5000, debug=True)
+

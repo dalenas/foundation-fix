@@ -1,7 +1,11 @@
 import cv2
 import numpy as np
+import os
 
-CASCADE_PATH = 'software/backend/data/haarcascade_frontalface_default.xml'
+# Get the absolute path to the cascade file relative to this script
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+CASCADE_PATH = os.path.join(SCRIPT_DIR, '..', 'data', 'haarcascade_frontalface_default.xml')
+CASCADE_PATH = os.path.abspath(CASCADE_PATH)
 
 
 # ---------- LIVE FEED: CAPTURE FRAME WHEN SHEET IN BOX ----------
@@ -441,3 +445,6 @@ def get_face_codes():
     print("RGB array:\n", rgb_array)
 
     return skin_rgb, rgb_array
+
+if __name__ == "__main__":
+    get_face_codes()

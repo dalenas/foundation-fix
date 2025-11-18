@@ -1,42 +1,42 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces First Sketch: Housing}}{4}{figure.caption.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces First CAD Models: Housing}}{5}{figure.caption.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces First Sketch: Dispenser Systems}}{5}{figure.caption.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces First CAD Models: Dispenser Systems}}{6}{figure.caption.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Second Iteration: Full Assembly}}{7}{figure.caption.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Second Iteration: Exploded View}}{7}{figure.caption.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Second Iteration: Housing Skeleton and Walls}}{8}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Second Iteration: Brackets for Dispenser System}}{8}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Final: Full Assembly \(Exploded\)}}{9}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Housing: Walls}}{10}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Housing: Lid}}{10}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Housing: Skeleton}}{11}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Dispenser System : Brackets - for connecting to housing, guide shaft, stabilizing syringe, and pushing down syringe plunger}}{12}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Dispenser System : Full assembly}}{13}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Full Assembly Exploded View}}{14}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Housing: Walls - Back}}{15}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Housing: Walls - Side}}{16}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Housing: Lid}}{16}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Dispenser System : L-Brackets}}{17}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Dispenser System : Syringe Brackets}}{18}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Dispenser System : Full assembly Exploded View}}{19}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces First Sketch: Housing}}{5}{figure.caption.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces First CAD Models: Housing}}{6}{figure.caption.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces First Sketch: Dispenser Systems}}{6}{figure.caption.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces First CAD Models: Dispenser Systems}}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Final: Full Assembly \(Exploded\)}}{8}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Housing: Walls}}{9}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Housing: Lid}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Housing: Skeleton}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Dispenser System : Brackets - for connecting to housing, guide shaft, stabilizing syringe, and pushing down syringe plunger}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Dispenser System : Full assembly}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Full Assembly Exploded View}}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Housing: Walls - Back}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Housing: Walls - Side}}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Housing: Lid}}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Dispenser System : L-Brackets}}{18}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Dispenser System : Syringe Brackets}}{19}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Dispenser System : Full assembly Exploded View}}{20}{figure.caption.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Initial Flowchart for Control Logic}}{20}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Pseudocode: Image Processing Algorithms.}}{21}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Pseudocode: Embedded System.}}{22}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces User Flow Diagram}}{22}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Initial Figma Mockup: UI/UX - Landing page.}}{23}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Initial Figma Mockup: UI/UX - Loading the foundation shades.}}{23}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Macbeth Color Reference Sheet}}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Initial Flowchart for Control Logic}}{21}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Pseudocode: Image Processing Algorithms.}}{22}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Pseudocode: Embedded System.}}{23}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces UI/UX - Landing page.}}{23}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces UI/UX - Loading the foundation shades.}}{24}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Pseudocode: Image Processing Algorithms.}}{25}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Pseudocode: Embedded System.}}{26}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces User Flow Diagram}}{27}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Initial Figma Mockup: UI/UX - Landing page.}}{28}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Initial Figma Mockup: UI/UX - Loading the foundation shades.}}{28}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Macbeth Color Reference Sheet}}{30}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Preliminary Wiring Diagram}}{28}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Perf Board and Servo Motor to Driver Connection}}{29}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Final Wiring Diagrams}}{30}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Final Circuitry Under Housing Lid}}{31}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Preliminary Wiring Diagram}}{33}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Perf Board and Servo Motor to Driver Connection}}{34}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Final Wiring Diagrams}}{35}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Final Circuitry Under Housing Lid}}{36}{figure.caption.33}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Dispenser Systems Fully Assembled}}{33}{figure.caption.34}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Skeleton/Internal Structure}}{34}{figure.caption.35}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Dispenser Systems Fully Assembled}}{37}{figure.caption.34}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Skeleton/Internal Structure}}{38}{figure.caption.35}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
