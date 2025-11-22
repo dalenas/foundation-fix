@@ -1,6 +1,6 @@
 # src/color_algorithm.py
-from src.face_ref_scan_static import analyze_image
-from src.rgb_to_lab import gamma_to_linear, lighting_correction, linear_to_xyz, xyz_to_lab, median_lab
+from face_ref_scan_static import analyze_image
+from rgb_to_lab import gamma_to_linear, lighting_correction, linear_to_xyz, xyz_to_lab, median_lab
 import numpy as np
 
 # ---------- BASE SKIN TONE ----------

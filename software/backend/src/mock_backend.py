@@ -52,5 +52,5 @@ def dispense():
     return jsonify({"message": f"Dispensing {color}"}), 200
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="tacobell.local", port=5173)
 # A simple Mock Flask server with three endpoints: /ping, /analyze, and /dispense

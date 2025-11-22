@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+"""from flask import Flask, request, jsonify
 from color_algorithm import image_to_hex
 from PIL import Image
 import base64
@@ -47,3 +47,4 @@ def ping():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+"""

@@ -10,7 +10,6 @@ import dispenser as disp
 import time
 
 DELAY = 5
-STEPS_PROP = disp.calculate_steps([62.0, 12.0, 22.0])
 #disp.extract_foundation(disp.WHITE_MOTOR_PINS, 4096)
 #disp.dispense_foundation(disp.WHITE_MOTOR_PINS, disp.WHITE_SWITCH_PIN, STEPS_PROP[disp.WHITE_IND])
 #time.sleep(DELAY)
@@ -23,7 +22,7 @@ STEPS_PROP = disp.calculate_steps([62.0, 12.0, 22.0])
 #disp.extract_foundation(disp.BLUE_MOTOR_PINS, 4096)
 #disp.dispense_foundation(disp.BLUE_MOTOR_PINS, disp.BLUE_SWITCH_PIN, STEPS_PROP[disp.BLUE_IND])
 #time.sleep(DELAY)
-#disp.extract_foundation(disp.YELLOW_MOTOR_PINS, 4096)
+disp.extract_foundation(disp.YELLOW_MOTOR_PINS, 4096)
 #disp.dispense_foundation(disp.YELLOW_MOTOR_PINS, disp.YELLOW_SWITCH_PIN, STEPS_PROP[disp.YELLOW_IND])
 #lgpio.gpiochip_close(disp.CHIP)
 
@@ -37,5 +36,5 @@ STEPS_PROP = disp.calculate_steps([62.0, 12.0, 22.0])
 #disp.extract_foundation(disp.BLUE_MOTOR_PINS, 4096)
 #disp.dispense_foundation(disp.BLUE_MOTOR_PINS, disp.BLUE_SWITCH_PIN, 4096)
 #disp.extract_foundation(disp.YELLOW_MOTOR_PINS, 4096)
-disp.dispense_foundation(disp.YELLOW_MOTOR_PINS, disp.YELLOW_SWITCH_PIN, 4096)
+#disp.dispense_foundation(disp.YELLOW_MOTOR_PINS, disp.YELLOW_SWITCH_PIN, 4096)
 lgpio.gpiochip_close(disp.CHIP)
