@@ -9,6 +9,7 @@ import os
 from src import rgb_to_lab as rgb2lab
 from src import dispenser as disp
 from src import face_ref_scan_static as frs
+from src.color_algorithm import image_to_hex
 
 app = Flask(__name__)
 CORS(app)
