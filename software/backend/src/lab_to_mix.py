@@ -1,6 +1,6 @@
 import numpy as np
 
-from lib import constants as const
+from .lib import constants as const
 
 def simplex_projection(prop_0):
     prop_sort = np.sort(prop_0)[::-1]
@@ -24,5 +24,3 @@ def proportion_calculation(lab_code):
         prop_0 = np.linalg.lstsq(BBt + eps * np.eye(BBt.shape[0]), Bt, rcond=None)[0]
     prop = simplex_projection(prop_0)
     return prop
-
-print(proportion_calculation(np.array([62.0, 12.0, 22.0])))

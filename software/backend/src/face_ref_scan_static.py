@@ -211,6 +211,7 @@ def analyze_image(image_path):
 
     return skin_rgb, reference_rgb
 
+"""
 # ---------- MAIN ----------
 
 if __name__ == "__main__":
@@ -222,3 +223,4 @@ if __name__ == "__main__":
     skin, reference = analyze_image(image_path)
     print("Skin samples:\n", skin)
     print("Reference patches:\n", reference)
+"""

@@ -9,7 +9,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import {
   Cpu,
+  Droplets,
   Image,
   CheckCircle2,
   AlertCircle,
@@ -20,7 +27,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 
-const BACKEND_URL = "http://127.0.0.1:5000";
+const BACKEND_URL = "http://172.20.10.2:5000";
 
 const Device = () => {
   const navigate = useNavigate();
@@ -207,7 +214,7 @@ const Device = () => {
     }
 
     if (!backendOnline) {
-      toast.error("Backend (main.py) is not running on 127.0.0.1:5000.");
+      toast.error("Backend (main.py) is not running on tacobell.local:8080.");
       return;
     }
 
@@ -245,7 +252,7 @@ const Device = () => {
     if (!analysisResult) return;
 
     if (!backendOnline) {
-      toast.error("Backend (main.py) is not running on 127.0.0.1:5000.");
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
       return;
     }
 
@@ -253,7 +260,7 @@ const Device = () => {
       const response = await fetch(`${BACKEND_URL}/dispense`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ color: analysisResult }),
+        body: JSON.stringify({ lab: analysisResult }),
       });
 
       const data = await response.json();
@@ -261,6 +268,708 @@ const Device = () => {
       else toast.success(`Dispensing started for ${analysisResult}`);
     } catch (err) {
       console.error("Dispense error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const killMotors = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/killMotors`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Killed syringe motors.`);
+    } catch (err) {
+      console.error("Motor error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+  const handleExtractWhite = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractWhite`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for white syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractBlack = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractBlack`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for black syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractRed = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractRed`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for red syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractBlue = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractBlue`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for blue syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractYellow = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractYellow`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for yellow syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+  const handleExtractWhiteHalf = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractWhiteHalf`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for white syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractBlackHalf = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractBlackHalf`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for black syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractRedHalf = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractRedHalf`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for red syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractBlueHalf = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractBlueHalf`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for blue syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractYellowHalf = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractYellowHalf`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for yellow syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractWhiteQuarter = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractWhiteQuarter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for white syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractBlackQuarter = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractBlackQuarter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for black syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractRedQuarter = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractRedQuarter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for red syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractBlueQuarter = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractBlueQuarter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for blue syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractYellowQuarter = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractYellowQuarter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for yellow syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractWhiteEighth = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractWhiteEighth`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for white syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractBlackEighth = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractBlackEighth`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for black syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractRedEighth = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractRedHalfEighth`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for red syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const handleExtractBlueEighth = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractBlueEighth`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for blue syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+  const handleExtractYellowEighth = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/extractYellowEighth`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Extracting started for yellow syringe.`);
+    } catch (err) {
+      console.error("Extract error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+      const emptyWhite = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/emptyWhite`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Emptying white syringe.`);
+    } catch (err) {
+      console.error("Empty error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const emptyBlack = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/emptyBlack`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Emptying black syringe.`);
+    } catch (err) {
+      console.error("Empty error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const emptyRed = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/emptyRed`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Emptying red syringe.`);
+    } catch (err) {
+      console.error("Empty error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+    const emptyBlue = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/emptyBlue`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Emptying blue syringe.`);
+    } catch (err) {
+      console.error("Empty error:", err);
+      toast.error("Error connecting to backend (main.py).");
+      setBackendOnline(false);
+      setIsConnected(false);
+    }
+  };
+
+  const emptyYellow = async () => {
+    if (!backendOnline) {
+      toast.error("Backend (main.py) is not running on 172.20.10.2:5000.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/emptyYellow`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      let data;
+      if (response.status !== 204) {
+        data = await response.json();
+      }
+
+      if (data?.error) toast.error(data.error);
+      else toast.success(`Emptying yellow syringe.`);
+    } catch (err) {
+      console.error("Empty error:", err);
       toast.error("Error connecting to backend (main.py).");
       setBackendOnline(false);
       setIsConnected(false);
@@ -316,7 +1025,7 @@ const Device = () => {
           <p className="text-muted-foreground mb-6">
             {backendOnline
               ? "Local backend (main.py) is connected and ready."
-              : "Backend is offline. Start main.py on 127.0.0.1:5000 to analyze."}
+              : "Backend is offline. Start main.py on tacobell.local:8080 to analyze."}
           </p>
 
           <Card className="mb-6 border-border shadow-[var(--shadow-soft)]">
@@ -350,6 +1059,154 @@ const Device = () => {
                 </div>
               </div>
             </CardHeader>
+          </Card>
+
+          <Card className="mb-6 border-border shadow-[var(--shadow-soft)]">
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="flex items-center gap-2">
+                    <Droplets className="w-5 h-5 text-primary" /> Foundation Extraction
+                  </CardTitle>
+                  <CardDescription>Hold a cup under syringe for refill.</CardDescription>
+                </div>
+              </div>
+              <Button className="mt-2" onClick={killMotors}>
+                Kill Motors
+              </Button>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-3 justify-center">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="mt-2">White Foundation</Button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent className="w-40">
+                  <DropdownMenuItem onClick={handleExtractWhite}>
+                    Full
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractWhiteHalf}>
+                    Half
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractWhiteQuarter}>
+                    Quarter
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractWhiteEighth}>
+                    Eighth
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="mt-2">Black Foundation</Button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent className="w-40">
+                  <DropdownMenuItem onClick={handleExtractBlack}>
+                    Full
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractBlackHalf}>
+                    Half
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractBlackQuarter}>
+                    Quarter
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractBlackEighth}>
+                    Eighth
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="mt-2">Red Foundation</Button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent className="w-40">
+                  <DropdownMenuItem onClick={handleExtractRed}>
+                    Full
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractRedHalf}>
+                    Half
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractRedQuarter}>
+                    Quarter
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractRedEighth}>
+                    Eighth
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="mt-2">Blue Foundation</Button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent className="w-40">
+                  <DropdownMenuItem onClick={handleExtractBlue}>
+                    Full
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractBlueHalf}>
+                    Half
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractBlueQuarter}>
+                    Quarter
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractBlueEighth}>
+                    Eighth
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="mt-2">Yellow Foundation</Button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent className="w-40">
+                  <DropdownMenuItem onClick={handleExtractYellow}>
+                    Full
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractYellowHalf}>
+                    Half
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractYellowQuarter}>
+                    Quarter
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleExtractYellowEighth}>
+                    Eighth
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-6 border-border shadow-[var(--shadow-soft)]">
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="flex items-center gap-2">
+                    <Droplets className="w-5 h-5 text-primary" /> Clear Foundation
+                  </CardTitle>
+                  <CardDescription>Drop syringes down to empty foundation.</CardDescription>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-3 justify-center">
+              <Button className="mt-2" onClick={emptyWhite}>
+                White Foundation
+              </Button>
+              <Button className="mt-2" onClick={emptyBlack}>
+                Black Foundation
+              </Button>
+              <Button className="mt-2" onClick={emptyRed}>
+                Red Foundation
+              </Button>
+              <Button className="mt-2" onClick={emptyBlue}>
+                Blue Foundation
+              </Button>
+              <Button className="mt-2" onClick={emptyYellow}>
+                Yellow Foundation
+              </Button>
+            </CardContent>
           </Card>
 
           <Card className="mb-8 border-border shadow-[var(--shadow-soft)]">

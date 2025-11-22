@@ -445,6 +445,3 @@ def get_face_codes():
     print("RGB array:\n", rgb_array)
 
     return skin_rgb, rgb_array
-
-if __name__ == "__main__":
-    get_face_codes()
