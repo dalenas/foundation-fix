@@ -27,33 +27,18 @@ def analyze():
         with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp:
             tmp.write(img_bytes)
             temp_path = tmp.name
-        
-        # IMAGE PROCESSING AND COLOR ALGORITHM HERE
-            # IMAGE PROCESSING HERE
-        skin_gamma, reference_gamma = frs.analyze_image(temp_path)
-            # COLOR ALGORITHM HERE
-        skin_linear = rgb2lab.gamma_to_linear(skin_gamma)
-        reference_linear = rgb2lab.gamma_to_linear(reference_gamma)
 
-        print(skin_linear)
+        # USE NEW COLOR ALGORITHM
+        from src.color_algorithm import image_to_hex
+        hex_color = image_to_hex(temp_path, debug=False)
 
-        skin_corrected = rgb2lab.lighting_correction(reference_linear, skin_linear)
-
-        print(skin_corrected)
-
-        skin_xyz = rgb2lab.linear_to_xyz(skin_corrected)
-        skin_lab = rgb2lab.xyz_to_lab(skin_xyz)
-
-        lab_code = rgb2lab.average_lab(skin_lab)
-
-        print(lab_code)
-        
         os.remove(temp_path)
-        return jsonify({"result": lab_code.tolist()}), 200
+        return jsonify({"hex": hex_color}), 200
     
     except Exception as e:
         print("Test analyze error:", e)
-        return jsonify({"error": "Failed to analyze image."}), 500
+
+    return jsonify({"error": "Failed to analyze image."}), 500
 
 @app.route("/dispense", methods=["POST"])
 def dispense():
